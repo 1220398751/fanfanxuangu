@@ -299,6 +299,56 @@
     .tabs{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;padding:6px 10px}
     .tab{justify-content:center;padding:10px 6px;font-size:12px;border-bottom:2px solid transparent}
   }
+
+  /* ===== 情绪周期龙头战法 ===== */
+  .emo-phase-bar{display:flex;border-radius:10px;overflow:hidden;border:1px solid var(--border);height:42px;margin:12px 0}
+  .emo-phase-bar .seg{flex:1;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:rgba(255,255,255,.55);transition:all .25s;position:relative;cursor:pointer}
+  .emo-phase-bar .seg.active{color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.85);z-index:2;transform:scale(1.02)}
+  .emo-phase-bar .seg .pct{position:absolute;bottom:3px;right:6px;font-size:9px;opacity:.7;font-weight:400}
+  .seg-ice{background:linear-gradient(135deg,#4a5568,#2d3748)}
+  .seg-start{background:linear-gradient(135deg,#2f855a,#22543d)}
+  .seg-main{background:linear-gradient(135deg,#c53030,#742a2a)}
+  .seg-climax{background:linear-gradient(135deg,#c05621,#7b341e)}
+  .seg-fade{background:linear-gradient(135deg,#1a202c,#000000)}
+  .emo-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin:10px 0}
+  .emo-kpi{background:var(--panel2);border:1px solid var(--border);border-radius:10px;padding:10px 12px}
+  .emo-kpi .k{font-size:11px;color:var(--muted)}
+  .emo-kpi .v{font-size:20px;font-weight:900;margin-top:3px;font-family:var(--mono)}
+  .emo-pos-box{background:var(--panel2);border:1px solid var(--border);border-radius:12px;padding:14px;margin-top:10px}
+  .emo-pos-box .title{font-size:13px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+  .emo-pos-box .pos-range{font-size:22px;font-weight:900;font-family:var(--mono)}
+  .emo-pos-box .action{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .emo-ladder{margin-top:12px}
+  .emo-ladder .sector-head{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--panel2);border:1px solid var(--border);border-radius:10px 10px 0 0;flex-wrap:wrap}
+  .emo-ladder .sector-head .sn{font-size:15px;font-weight:900}
+  .emo-ladder .sector-head .badge{font-size:10px;border-radius:4px;padding:1px 6px;font-weight:700}
+  .emo-ladder .sector-head .badge.dragon{background:linear-gradient(135deg,#f6465d,#ffc45c);color:#fff}
+  .emo-ladder .tier-row{display:flex;gap:10px;padding:10px 14px;border-left:1px solid var(--border);border-right:1px solid var(--border);border-bottom:1px solid var(--border);align-items:stretch;flex-wrap:wrap}
+  .emo-ladder .tier-row:last-child{border-radius:0 0 10px 10px}
+  .emo-ladder .tier-label{flex:none;width:80px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;background:var(--bg2);border-radius:8px;padding:6px}
+  .emo-ladder .tier-label .n{font-size:16px;font-weight:900}
+  .emo-ladder .tier-label .l{font-size:9px;color:var(--dim);letter-spacing:1px}
+  .emo-ladder .tier-cards{flex:1;display:flex;gap:6px;flex-wrap:wrap;min-width:0}
+  .emo-stock{background:var(--panel3);border:1px solid var(--border2);border-radius:8px;padding:6px 10px;font-size:12px;cursor:pointer;transition:border-color .15s}
+  .emo-stock:hover{border-color:var(--red)}
+  .emo-stock .nm{font-weight:700;display:flex;align-items:center;gap:4px}
+  .emo-stock .cd{font-size:10px;color:var(--dim);font-family:var(--mono)}
+  .emo-stock .ms{font-size:10px;color:var(--muted);margin-top:2px;font-family:var(--mono)}
+  .emo-stock.dragon{border-color:var(--red);background:linear-gradient(135deg,#f6465d1a,#ffc45c14)}
+  .dragon-mark{font-size:9px;background:var(--red);color:#fff;border-radius:3px;padding:0 3px;font-weight:700}
+  .emo-signal{background:var(--panel2);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-top:10px}
+  .emo-signal .head{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  .emo-signal .head .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px var(--gold);animation:pulse 1.2s infinite}
+  .emo-signal .head .t{font-size:13px;font-weight:700}
+  .emo-signal .head .type{font-size:10px;background:var(--amber-soft);color:var(--amber);border-radius:4px;padding:1px 6px;font-weight:700}
+  .emo-signal .body{font-size:12px;color:var(--muted);line-height:1.7}
+  .emo-signal .body b{color:var(--text)}
+  .emo-low-table{min-width:780px}
+  .emo-section-title{font-size:13px;font-weight:700;color:var(--gold);margin:16px 0 8px;display:flex;align-items:center;gap:8px}
+  .emo-section-title::before{content:'';width:3px;height:14px;background:var(--gold);border-radius:2px}
+  .emo-run-bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:12px;margin-top:12px}
+  .emo-note{font-size:11px;color:var(--dim);line-height:1.7;margin-top:8px}
+  .emo-note b{color:var(--muted)}
 </style>
 </head>
 <body>
@@ -459,6 +509,8 @@
         <button class="tab" data-view="lhb">龙虎榜资金流向<span class="cnt" id="cntLhb">0</span></button>
         <button class="tab" data-view="ladder">连板梯队<span class="cnt" id="cntLadder">0</span></button>
         <button class="tab" data-view="sector">板块透视<span class="cnt" id="cntSector">0</span><em class="tag-new">新</em></button>
+        <button class="tab" data-view="boom">起爆前夜<span class="cnt" id="cntBoom">0</span><em class="tag-new">新</em></button>
+        <button class="tab" data-view="emotion">情绪周期龙头战法<span class="cnt" id="cntEmotion">0</span><em class="tag-new">新</em></button>
       </div>
 
       <!-- 妖股候选 -->
@@ -554,6 +606,168 @@
           </div>
         </div>
       </div>
+
+      <!-- 起爆前夜 -->
+      <div class="view" id="view-boom">
+        <div class="hint">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          起爆前夜 = 近期涨停基因（近15日涨停过）+ 今日温和整理（涨幅 -3%~3%）+ 均线粘合（默认&lt;2%，可放宽）+ 温和放量（量比 1.3~5.0）→ 蓄势待发候选。五项评分（满分100）+ 板块联动加权（最多 +20）。公开接口无法获取 Level-2 竞价明细，竞价异动锚点为 5 日均量估算，仅供参考。
+        </div>
+        <div class="boom-params" style="display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:12px;margin-top:12px">
+          <div class="fitem" style="margin:0">
+            <div class="fname">流通市值 ≤</div>
+            <input type="number" id="boomMcap" value="300" min="10" max="3000" step="10"><span class="unit">亿</span>
+          </div>
+          <div class="fitem" style="margin:0">
+            <div class="fname">最低评分<span class="fnote">总分 = 五项(100) + 板块(+20)</span></div>
+            <input type="number" id="boomScore" value="70" min="0" max="120" step="5"><span class="unit">分</span>
+          </div>
+          <div class="fitem" style="margin:0">
+            <div class="fname">均线粘合 &lt;<span class="fnote">可放宽</span></div>
+            <input type="number" id="boomSticky" value="2" min="0.5" max="8" step="0.5"><span class="unit">%</span>
+          </div>
+          <div class="fitem" style="margin:0">
+            <div class="fname">涨停基因窗口</div>
+            <select id="boomDays" style="background:var(--bg2);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:7px 10px">
+              <option value="10">10日</option>
+              <option value="15" selected>15日</option>
+              <option value="20">20日</option>
+            </select>
+          </div>
+          <div class="fitem" style="margin:0">
+            <div class="fname">并发数<span class="fnote">提速且防封</span></div>
+            <select id="boomConc" style="background:var(--bg2);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:7px 10px">
+              <option value="4">4 路</option>
+              <option value="6" selected>6 路</option>
+              <option value="8">8 路</option>
+            </select>
+          </div>
+          <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);cursor:pointer">
+            <input type="checkbox" id="boomNeg" checked> 负面公告过滤
+          </label>
+          <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);cursor:pointer">
+            <input type="checkbox" id="boomSector" checked> 板块联动加权
+          </label>
+          <button class="btn" id="boomRun">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            开始扫描
+          </button>
+        </div>
+        <div class="progress" id="boomProgress" style="display:none;margin-top:12px">
+          <div class="bar" id="boomBar"></div>
+        </div>
+        <div style="font-size:11px;color:var(--dim);margin-top:8px" id="boomStatus"></div>
+        <div id="boomKpis" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"></div>
+        <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
+          <div class="card" style="flex:2 1 560px;min-width:0">
+            <div style="font-size:12px;color:var(--gold);margin-bottom:6px">候选池（按总分降序 · 点击行查看明细）</div>
+            <div class="table-wrap">
+              <table id="boomTable">
+                <thead>
+                  <tr>
+                    <th>代码</th><th>名称</th><th>现价</th><th>今日涨跌</th><th>流通市值</th>
+                    <th>涨停基因</th><th>距最后涨停</th><th>均线粘合</th><th>量比</th>
+                    <th>筹码穿透</th><th>竞价锚点</th><th>板块</th><th>公告预警</th>
+                    <th>五项分</th><th>板块加分</th><th>总分</th>
+                  </tr>
+                </thead>
+                <tbody id="boomBody"></tbody>
+              </table>
+            </div>
+            <div class="empty" id="boomEmpty" style="display:none">暂无候选，可降低门槛或等待盘后数据。</div>
+          </div>
+          <div class="card" style="flex:1 1 300px;min-width:0">
+            <div style="font-size:12px;color:var(--gold);margin-bottom:6px">当日最强板块（涨停家数，用于加权）</div>
+            <div id="boomHotSectors" style="font-size:12px;line-height:1.9"></div>
+            <div style="font-size:12px;color:var(--gold);margin:10px 0 6px">概念板块涨幅榜（参考）</div>
+            <div id="boomConcepts" style="font-size:12px;line-height:1.9"></div>
+          </div>
+        </div>
+        <div class="boom-detail" id="boomDetail" style="display:none;background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:14px;margin-top:12px;font-size:12px"></div>
+      </div>
+
+      <!-- 情绪周期龙头战法 -->
+      <div class="view" id="view-emotion">
+        <div class="hint">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          情绪周期龙头战法 = 五阶段定位（冰点/启动/主升/高潮/退潮）+ 仓位建议 + 主线梯队真龙辨识 + 黄金买点（首次良性分歧）+ 低位补涨挖掘。基于《野人哥交易实战笔记》方法论，数据为公开接口实时计算，仅供参考。
+        </div>
+        <div class="emo-run-bar">
+          <div class="fitem" style="margin:0">
+            <div class="fname">涨停基因窗口<span class="fnote">用于黄金买点/补涨扫描</span></div>
+            <select id="emoDays" style="background:var(--bg2);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:7px 10px">
+              <option value="10">10日</option>
+              <option value="15" selected>15日</option>
+              <option value="20">20日</option>
+            </select>
+          </div>
+          <div class="fitem" style="margin:0">
+            <div class="fname">并发数</div>
+            <select id="emoConc" style="background:var(--bg2);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:7px 10px">
+              <option value="4">4 路</option>
+              <option value="6" selected>6 路</option>
+              <option value="8">8 路</option>
+            </select>
+          </div>
+          <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);cursor:pointer">
+            <input type="checkbox" id="emoLowScan" checked> 启用低位补涨扫描（需K线，较慢）
+          </label>
+          <button class="btn primary" id="emoRun">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            开始分析
+          </button>
+        </div>
+        <div class="progress" id="emoProgress" style="display:none;margin-top:12px">
+          <div class="bar" id="emoBar"></div>
+        </div>
+        <div style="font-size:11px;color:var(--dim);margin-top:8px" id="emoStatus"></div>
+
+        <!-- 模块1：情绪周期定位器 -->
+        <div class="emo-section-title">① 情绪周期定位</div>
+        <div class="emo-phase-bar" id="emoPhaseBar">
+          <div class="seg seg-ice" data-phase="ice">冰点<span class="pct">0~10%</span></div>
+          <div class="seg seg-start" data-phase="start">启动<span class="pct">20~30%</span></div>
+          <div class="seg seg-main" data-phase="main">主升<span class="pct">50~80%</span></div>
+          <div class="seg seg-climax" data-phase="climax">高潮<span class="pct">&lt;30%</span></div>
+          <div class="seg seg-fade" data-phase="fade">退潮<span class="pct">0%</span></div>
+        </div>
+        <div class="emo-kpis" id="emoKpis"></div>
+
+        <!-- 模块2：仓位建议 -->
+        <div class="emo-section-title">② 仓位建议与操作方向</div>
+        <div class="emo-pos-box" id="emoPosBox">
+          <div class="title"><span id="emoPosPhase">等待分析…</span></div>
+          <div class="pos-range" id="emoPosRange">—</div>
+          <div class="action" id="emoPosAction">点击「开始分析」获取当前阶段仓位建议</div>
+        </div>
+
+        <!-- 模块3：主线梯队 -->
+        <div class="emo-section-title">③ 主线梯队结构（真龙辨识）</div>
+        <div id="emoLadder"></div>
+
+        <!-- 模块4：黄金买点 -->
+        <div class="emo-section-title">④ 黄金买点监控（首次良性分歧）</div>
+        <div id="emoGolden"></div>
+
+        <!-- 模块5：低位补涨 -->
+        <div class="emo-section-title">⑤ 低位补涨挖掘（高位切低位）</div>
+        <div class="table-wrap" style="margin-top:8px">
+          <table id="emoLowTable" class="emo-low-table">
+            <thead>
+              <tr>
+                <th>代码</th><th>名称</th><th>现价</th><th>今日涨跌</th><th>流通市值</th>
+                <th>本轮涨幅</th><th>量比</th><th>均线</th><th>所属板块</th><th>入选理由</th>
+              </tr>
+            </thead>
+            <tbody id="emoLowBody"></tbody>
+          </table>
+        </div>
+        <div class="empty" id="emoLowEmpty" style="display:none">暂无低位补涨候选，或未启用低位补涨扫描。</div>
+
+        <div class="emo-note">
+          <b>方法论说明：</b>情绪阶段判定基于连板高度、涨停/跌停家数、昨日涨停今日溢价（面率）综合打分；真龙需同时满足连板身位最高、率先打破压制、同板块高度联动；黄金买点为近N日涨停股今日出现分歧迹象（未涨停但放量/涨幅收窄）且板块内无跌停负反馈；低位补涨为主线板块内涨幅&lt;20%、均线多头排列、量比&gt;1.5的标的。所有信号为算法筛选，不构成投资建议。
+        </div>
+      </div>
     </div>
 
     <!-- 数据源说明 -->
@@ -588,7 +802,13 @@
 const API = {
   ztPool: 'https://push2ex.eastmoney.com/getTopicZTPool',
   lhb: 'https://datacenter-web.eastmoney.com/api/data/v1/get',
-  trends: 'https://push2his.eastmoney.com/api/qt/stock/trends/get'
+  trends: 'https://push2his.eastmoney.com/api/qt/stock/trends/get',
+  /* 起爆前夜新增 */
+  clist: 'https://push2delay.eastmoney.com/api/qt/clist/get',       // 全市场行情（CORS，pz 上限 100）
+  kline: 'https://web.ifzq.gtimg.cn/appstock/app/fqkline/get',     // 60日K线（腾讯，CORS）
+  ann: 'https://np-anotice-stock.eastmoney.com/api/security/ann',  // 个股公告（CORS）
+  board: 'https://push2delay.eastmoney.com/api/qt/clist/get',       // 概念板块涨幅榜
+  dtPool: 'https://push2ex.eastmoney.com/getTopicDTPool'            // 跌停池（CORS）
 };
 const ZT_UT = '7eea3edcaed734bea9cbfc24409ed989';
 const ZT_PAGESIZE = 600;
@@ -1354,6 +1574,369 @@ function initTabs(){
 }
 
 /* ============================================================
+ * 起爆前夜（v5 新增）
+ * 流程：近N日涨停基因 → 全市场实时过滤（涨幅-3~3% / 非ST / 市值≤上限）
+ *       → 60日K线硬检查（均线粘合<2% & 量比1.3~5）→ 负面公告过滤
+ *       → 五项评分 + 板块联动加权 → 按总分降序输出
+ * 数据源：push2delay clist（全市场，CORS）/ 腾讯 fqkline（60日K线，CORS）
+ *         / 东财个股公告（负面过滤）/ push2ex 涨停池（基因）
+ * ============================================================ */
+const BOOM_BEAR_KW = ['减持','质押','违规','处罚','立案','警示','预亏','预减','退市','解禁','终止','下修','爆雷','诉讼','冻结','下调','流拍','失败','低于预期','问询函','监管函','关注函','亏损','逾期','失信','被执行','商誉减值','业绩变脸','清仓','减持计划','立案调查'];
+const BOOM_WARN_KW = ['风险提示','异常波动'];
+const BOOM_FS = 'm:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23,m:0+t:81+s:2048';
+const BOOM_STATE = { running: false, genes: null, cands: [] };
+
+function boomSecid(code){ return /^(60|68|90|92|51)/.test(code) ? 'sh' + code : 'sz' + code; }
+
+async function fetchCors(url, timeout = 20000){
+  const ctl = new AbortController();
+  const t = setTimeout(() => ctl.abort(), timeout);
+  try {
+    const r = await fetch(url, { signal: ctl.signal });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return await r.json();
+  } finally { clearTimeout(t); }
+}
+
+/* 并发执行器：items 并发 limit 路，fn 抛错则该位为 null，onOne 报告进度 */
+async function pMapLimit(items, limit, fn, onOne){
+  const n = items.length;
+  if (!n) return [];
+  const results = new Array(n);
+  let next = 0, done = 0;
+  async function worker(){
+    while (next < n){
+      const i = next++;
+      try { results[i] = await fn(items[i], i); }
+      catch (e) { results[i] = null; }
+      done++;
+      if (onOne) onOne(done, n);
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(limit, n) }, worker));
+  return results;
+}
+
+/* 阶段1：近N日涨停基因（跳过非交易日，最多探测 N+6 自然日） */
+async function boomLoadGenes(days, onProgress){
+  const start = new Date(state.date);
+  const tries = [];
+  for (let i = 0; i <= days + 6 && tries.length < days + 6; i++){
+    tries.push(ymd(addDays(start, -i)));
+  }
+  const got = await pMapLimit(tries, 4, async ds => {
+    try { const p = await loadZTPool(ds); return { ds, p }; }
+    catch (e) { return null; }
+  }, onProgress);
+  const genes = new Map();
+  got.forEach((g, idx) => {
+    if (!g || !g.p || !g.p.length) return;
+    g.p.forEach(s => {
+      const old = genes.get(s.code);
+      if (!old){
+        genes.set(s.code, { code: s.code, name: s.name, hybk: s.hybk, ltsz: s.ltsz, ztCount: 1, maxLb: s.lbc, lastIdx: idx, lastDate: g.ds, dates: [g.ds] });
+      } else {
+        old.ztCount++;
+        old.maxLb = Math.max(old.maxLb, s.lbc);
+        if (idx < old.lastIdx){ old.lastIdx = idx; old.lastDate = g.ds; }
+        old.dates.push(g.ds);
+      }
+    });
+  });
+  return genes;
+}
+
+/* 阶段2：全市场实时行情 → 过滤（涨幅-3~3 / 非ST / 市值≤上限 / 有基因） */
+async function boomLoadMarket(genes, mcapMax, conc, onProgress){
+  const total = 6000, pageSize = 100;
+  const pages = Array.from({ length: Math.ceil(total / pageSize) }, (_, i) => i + 1);
+  const got = await pMapLimit(pages, Math.min(conc, 10), async p => {
+    const url = `${API.clist}?pn=${p}&pz=${pageSize}&po=1&np=1&fltt=2&invt=2&fid=f12&fs=${BOOM_FS}&fields=f2,f3,f8,f10,f12,f14,f21`;
+    const j = await fetchCors(url);
+    return (j && j.data && j.data.diff) || [];
+  }, onProgress);
+  const cands = [];
+  const seen = new Set();
+  got.flat().forEach(it => {
+    if (!it || !it.f12) return;
+    const code = String(it.f12);
+    if (seen.has(code)) return;
+    seen.add(code);
+    const g = genes.get(code);
+    if (!g) return;
+    const name = String(it.f14 || '');
+    if (/ST/i.test(name)) return;
+    const zdp = it.f3 == null ? null : +it.f3;
+    if (zdp == null || zdp <= -3 || zdp >= 3) return;
+    const ltsz = (it.f21 || 0);
+    if (!ltsz || ltsz > mcapMax * 1e8) return;
+    cands.push({
+      code, name, price: it.f2 != null ? +it.f2 : 0, zdp,
+      ltsz, volRatio: it.f10 != null ? +it.f10 : 0,
+      gene: g
+    });
+  });
+  return cands;
+}
+
+/* 阶段3：逐股拉 60日K线 → 硬检查（粘合<2% & 量比1.3~5） */
+async function boomLoadKlines(cands, conc, stickyMax, onProgress){
+  const got = await pMapLimit(cands, conc, async c => {
+    let kl = null, lastErr = null;
+    for (let i = 0; i < 2; i++){
+      try {
+        const url = `${API.kline}?param=${boomSecid(c.code)},day,,,60,qfq`;
+        const j = await fetchCors(url);
+        const d = (j && j.data && j.data[boomSecid(c.code)]) || {};
+        kl = d.qfqday || d.day || [];
+        if (kl.length >= 30) break;
+        kl = null;
+      } catch (e){ lastErr = e; if (i === 0) await new Promise(r => setTimeout(r, 400)); }
+    }
+    if (!kl) return null;
+    const st = boomKlineStats(kl);
+    c.kline = st;
+    if (!(st.sticky < stickyMax && c.volRatio >= 1.3 && c.volRatio <= 5)) return null;
+    return c;
+  }, onProgress);
+  return got.filter(Boolean);
+}
+
+function boomKlineStats(kl){
+  const closes = kl.map(k => +k[2]);
+  const cur = closes[closes.length - 1] || 0;
+  const ma = n => { const s = closes.slice(-n); return s.length ? s.reduce((a, b) => a + b, 0) / s.length : 0; };
+  const ma5 = ma(5), ma10 = ma(10), ma20 = ma(20), ma30 = ma(30), ma60 = ma(60);
+  const arr = [ma5, ma10, ma20, ma30, ma60].filter(v => v > 0);
+  const mx = Math.max.apply(null, arr), mn = Math.min.apply(null, arr);
+  const sticky = arr.length && cur ? (mx - mn) / cur * 100 : 99;
+  /* 筹码分布：60日量价均匀分配（[低,高] 11档），估算现价上方套牢占比 */
+  const bins = new Map();
+  kl.forEach(k => {
+    const h = +k[3], l = +k[4], v = +k[5];
+    if (!(h > 0 && l > 0 && v > 0)) return;
+    const step = (h - l) / 10;
+    for (let i = 0; i <= 10; i++){
+      const px = Math.round((l + step * i) * 100);
+      bins.set(px, (bins.get(px) || 0) + v / 11);
+    }
+  });
+  let tot = 0, above = 0;
+  bins.forEach((v, px) => { tot += v; if (px > cur * 100) above += v; });
+  const trapPct = tot ? above / tot * 100 : 50;   /* 现价上方套牢筹码 % */
+  /* 竞价异动锚点：近5日（不含当日）均量 × 8%，次日竞价量超此值视为异动 */
+  const vols = kl.slice(-6, -1).map(k => +k[5]);
+  const avgVol = vols.length ? vols.reduce((a, b) => a + b, 0) / vols.length : 0;
+  const anchor = avgVol * 0.08;
+  return { cur, ma5, ma10, ma20, ma30, ma60, sticky, trapPct, avgVol, anchor };
+}
+
+/* 阶段4：负面公告过滤（命中硬雷词剔除；风险提示类仅标记） */
+async function boomCheckNews(cands, conc, onProgress){
+  const got = await pMapLimit(cands, conc, async c => {
+    const url = `${API.ann}?sr=-1&page_size=10&page_index=1&ann_type=A&client_source=web&stock_list=${c.code}`;
+    const j = await fetchCors(url);
+    const lst = (j && j.data && j.data.list) || [];
+    const bears = [], warns = [];
+    lst.slice(0, 8).forEach(it => {
+      const t = String(it.title || it.art_title || '');
+      BOOM_BEAR_KW.forEach(kw => { if (t.indexOf(kw) > -1 && bears.indexOf(kw) < 0) bears.push(kw); });
+      BOOM_WARN_KW.forEach(kw => { if (t.indexOf(kw) > -1 && warns.indexOf(kw) < 0) warns.push(kw); });
+    });
+    c.bears = bears;
+    c.warns = warns;
+    return bears.length ? null : c;   /* 硬雷剔除 */
+  }, onProgress);
+  return got.filter(Boolean);
+}
+
+/* 阶段5：五项评分 + 板块联动加权 */
+function boomHotTop(){
+  const hot = new Map();
+  (state.pool || []).forEach(s => {
+    const k = s.hybk || '—';
+    hot.set(k, (hot.get(k) || 0) + 1);
+  });
+  return Array.from(hot.entries()).sort((a, b) => b[1] - a[1]).map(e => e[0]);
+}
+function boomScoreOf(c, hotTop){
+  const g = c.gene;
+  const zt = g.ztCount;
+  const s1 = zt >= 4 ? 25 : zt === 3 ? 21 : zt === 2 ? 16 : 10;          /* 涨停基因 25 */
+  const st = c.kline.sticky;
+  const s2 = st < 0.8 ? 20 : st < 1.2 ? 16 : st < 1.6 ? 12 : 8;          /* 均线粘合 20 */
+  const v = c.volRatio;
+  const s3 = (v >= 2 && v <= 3.5) ? 20 : ((v >= 1.6 && v < 2) || (v > 3.5 && v <= 4.5)) ? 15 : 10; /* 量比 20 */
+  const mc = c.ltsz / 1e8;
+  const s4 = mc < 30 ? 15 : mc < 60 ? 12 : mc < 100 ? 9 : mc < 200 ? 6 : 3;  /* 市值 15 */
+  const gap = g.lastIdx;
+  const s5 = gap <= 3 ? 20 : gap <= 6 ? 15 : gap <= 10 ? 10 : 5;         /* 蓄势位置 20 */
+  const base = s1 + s2 + s3 + s4 + s5;
+  let bonus = 0;
+  if (hotTop){
+    const idx = hotTop.indexOf(g.hybk);
+    if (idx >= 0 && idx < 3) bonus = 20;
+    else if (idx >= 3 && idx < 8) bonus = 10;
+  }
+  return { base, bonus, total: base + bonus, parts: { s1, s2, s3, s4, s5 } };
+}
+
+function boomRender(cands, hotTop, concepts){
+  $('#cntBoom').textContent = cands.length;
+  /* KPI */
+  const kpis = [
+    ['涨停基因池', BOOM_STATE.genes ? BOOM_STATE.genes.size : 0],
+    ['全市场过滤后', BOOM_STATE.cands.length],
+    ['K线硬检查通过', cands.length],
+    ['负面过滤剔除', BOOM_STATE.newsSkip || 0],
+    ['最终候选', cands.filter(c => c.score && c.score.total >= c.minScore).length]
+  ];
+  $('#boomKpis').innerHTML = kpis.map(k => `<div style="background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:8px 14px;min-width:110px"><div style="font-size:11px;color:var(--muted)">${k[0]}</div><div class="num" style="font-size:20px;font-weight:900;color:var(--gold)">${k[1]}</div></div>`).join('');
+  /* 板块榜 */
+  if (hotTop && hotTop.length){
+    $('#boomHotSectors').innerHTML = hotTop.slice(0, 8).map((h, i) =>
+      `<div style="display:flex;justify-content:space-between;border-bottom:1px dashed #182230;padding:3px 0"><span>${i + 1}. ${esc(h)}</span><b style="color:${i < 3 ? 'var(--red)' : 'var(--muted)'}">${i < 3 ? '权重+20' : i < 8 ? '+10' : ''}</b></div>`).join('');
+  } else {
+    $('#boomHotSectors').innerHTML = '<div style="color:var(--muted)">暂无当日涨停数据</div>';
+  }
+  if (concepts && concepts.length){
+    $('#boomConcepts').innerHTML = concepts.map(c => `<div style="display:flex;justify-content:space-between"><span>${esc(c.n)}</span><b class="${clsOf(c.p)}">${fmtPct(c.p)}</b></div>`).join('');
+  }
+  /* 表格 */
+  const body = $('#boomBody');
+  if (!cands.length){
+    body.innerHTML = '';
+    $('#boomEmpty').style.display = 'block';
+    return;
+  }
+  $('#boomEmpty').style.display = 'none';
+  body.innerHTML = cands.map(c => {
+    const sc = c.score;
+    const warn = c.warns && c.warns.length ? `<span style="color:var(--amber)">${esc(c.warns[0])}</span>` : '<span style="color:var(--muted)">无</span>';
+    return `<tr data-code="${c.code}" style="cursor:pointer">
+      <td>${esc(c.code)}</td><td>${esc(c.name)}</td>
+      <td>${c.price.toFixed(2)}</td><td class="${clsOf(c.zdp)}">${fmtPct(c.zdp)}</td>
+      <td>${(c.ltsz / 1e8).toFixed(0)}亿</td>
+      <td style="color:var(--red)">${c.gene.ztCount}次/${c.gene.maxLb}板</td>
+      <td>${c.gene.lastIdx ? c.gene.lastIdx + '天前' : '今日'}</td>
+      <td>${c.kline.sticky.toFixed(2)}%</td>
+      <td>${c.volRatio.toFixed(2)}</td>
+      <td>${(100 - c.kline.trapPct).toFixed(0)}%</td>
+      <td>&gt;${(c.kline.anchor / 1e4).toFixed(1)}万手</td>
+      <td>${esc(c.gene.hybk)}</td>
+      <td>${warn}</td>
+      <td><b>${sc.base}</b></td>
+      <td class="${sc.bonus > 0 ? 'up' : ''}">${sc.bonus ? '+' + sc.bonus : 0}</td>
+      <td><b style="font-size:15px;color:var(--gold)">${sc.total}</b></td>
+    </tr>`;
+  }).join('');
+  /* 行点击明细 */
+  $$('#boomBody tr').forEach(tr => {
+    tr.addEventListener('click', () => {
+      const c = cands.find(x => x.code === tr.dataset.code);
+      if (!c) return;
+      const sc = c.score, k = c.kline, g = c.gene;
+      $('#boomDetail').style.display = 'block';
+      $('#boomDetail').innerHTML = `
+        <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px">
+          <b style="font-size:14px">${esc(g.name)} ${esc(g.code)} · 现价 ${c.price.toFixed(2)} · ${fmtPct(c.zdp)}</b>
+          <b style="color:var(--gold)">总分 ${sc.total} = 五项 ${sc.base} + 板块 ${sc.bonus}</b>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-top:10px">
+          <div>涨停基因 <b style="color:var(--red)">${sc.parts.s1}/25</b><div style="color:var(--muted)">${g.ztCount} 次涨停 · 最高 ${g.maxLb} 板 · 近${$('#boomDays').value}日</div></div>
+          <div>均线粘合 <b>${sc.parts.s2}/20</b><div style="color:var(--muted)">MA5 ${k.ma5.toFixed(2)} / MA10 ${k.ma10.toFixed(2)} / MA20 ${k.ma20.toFixed(2)} / MA30 ${k.ma30.toFixed(2)} / MA60 ${k.ma60.toFixed(2)}</div></div>
+          <div>量比 <b>${sc.parts.s3}/20</b><div style="color:var(--muted)">实时量比 ${c.volRatio.toFixed(2)}（1.3~5 区间）</div></div>
+          <div>市值 <b>${sc.parts.s4}/15</b><div style="color:var(--muted)">流通市值 ${(c.ltsz / 1e8).toFixed(1)} 亿</div></div>
+          <div>蓄势位置 <b>${sc.parts.s5}/20</b><div style="color:var(--muted)">最后涨停 ${g.lastIdx ? g.lastIdx + ' 个交易日前' : '今日'}（${esc(g.lastDate)}）</div></div>
+          <div>筹码穿透 <b>${(100 - k.trapPct).toFixed(0)}%</b><div style="color:var(--muted)">现价上方套牢筹码约 ${k.trapPct.toFixed(0)}%</div></div>
+        </div>
+        <div style="margin-top:10px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px;line-height:1.8">
+          <b style="color:var(--gold)">次日竞价异动锚点：</b>竞价量 &gt; ${(k.anchor / 1e4).toFixed(1)} 万手（近5日均量 ${(k.avgVol / 1e4).toFixed(1)} 万手 × 8%）即视为竞价异动，结合 9:25 涨幅 &gt;5% 判断抢筹。<br>
+          <b style="color:var(--gold)">操作提示：</b>均线粘合 + 温和放量 = 蓄势形态，若次日竞价放量高开且板块仍强，则起爆概率提升；反之若跌破 MA20（${k.ma20.toFixed(2)}）则形态走坏。
+          ${c.warns && c.warns.length ? '<br><b style="color:var(--amber)">公告提示：</b>' + c.warns.map(esc).join(' / ') : ''}
+        </div>`;
+      $('#boomDetail').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  });
+}
+
+async function loadBoomConcepts(){
+  try {
+    const url = `${API.board}?pn=1&pz=8&po=1&np=1&fltt=2&invt=2&fid=f3&fs=m:90+t:2+f:!50&fields=f3,f14`;
+    const j = await fetchCors(url);
+    return ((j && j.data && j.data.diff) || []).map(it => ({ n: it.f14, p: it.f3 }));
+  } catch (e) { return []; }
+}
+
+async function runBoom(){
+  if (BOOM_STATE.running) return;
+  const mcapMax = +$('#boomMcap').value || 300;
+  const minScore = +$('#boomScore').value || 70;
+  const stickyMax = +$('#boomSticky').value || 2;
+  const days = +$('#boomDays').value || 15;
+  const conc = +$('#boomConc').value || 6;
+  const useNeg = $('#boomNeg').checked;
+  const useSector = $('#boomSector').checked;
+  BOOM_STATE.running = true;
+  $('#boomRun').disabled = true;
+  $('#boomProgress').style.display = 'block';
+  $('#boomBody').innerHTML = '';
+  $('#boomEmpty').style.display = 'none';
+  const setProg = (pct, txt) => {
+    $('#boomBar').style.width = Math.min(100, pct) + '%';
+    $('#boomStatus').textContent = txt;
+  };
+  try {
+    if (!state.pool || !state.pool.length){
+      setProg(2, '先加载当日涨停池…');
+      try { await loadAll(); } catch (e) {}
+    }
+    /* 阶段1：涨停基因 */
+    setProg(3, '阶段 1/5：拉取近 ' + days + ' 日涨停池，构建涨停基因库…');
+    const genes = await boomLoadGenes(days, (d, n) => setProg(3 + d / n * 12, `阶段 1/5：涨停池 ${d}/${n}`));
+    BOOM_STATE.genes = genes;
+    setProg(15, `涨停基因库 ${genes.size} 只（近${days}日涨停过）`);
+    /* 阶段2：全市场 */
+    setProg(16, '阶段 2/5：拉取全市场实时行情（约 60 页并发）…');
+    const cands = await boomLoadMarket(genes, mcapMax, conc, (d, n) => setProg(16 + d / n * 14, `阶段 2/5：全市场行情 ${d}/${n} 页`));
+    BOOM_STATE.cands = cands;
+    setProg(30, `全市场过滤后 ${cands.length} 只（涨幅-3~3% / 非ST / 市值≤${mcapMax}亿 / 有涨停基因）`);
+    /* 阶段3：K线 */
+    setProg(31, `阶段 3/5：逐股拉取 60 日K线（${conc} 路并发，约需 20-60 秒）…`);
+    const passed = await boomLoadKlines(cands, conc, stickyMax, (d, n) => setProg(31 + d / n * 30, `阶段 3/5：K线分析 ${d}/${n}（均线粘合&lt;${stickyMax}% & 量比1.3~5）`));
+    setProg(61, `K线硬检查通过 ${passed.length} 只`);
+    /* 阶段4：公告 */
+    let final = passed;
+    if (useNeg && passed.length){
+      setProg(63, `阶段 4/5：负面公告过滤 ${passed.length} 只…`);
+      const clean = await boomCheckNews(passed, Math.min(conc, 6), (d, n) => setProg(63 + d / n * 17, `阶段 4/5：公告检查 ${d}/${n}`));
+      BOOM_STATE.newsSkip = passed.length - clean.length;
+      final = clean;
+      setProg(80, `负面公告剔除 ${BOOM_STATE.newsSkip} 只（减持/立案/预亏等硬雷）`);
+    } else {
+      BOOM_STATE.newsSkip = 0;
+    }
+    /* 阶段5：评分 */
+    setProg(82, '阶段 5/5：五项评分 + 板块联动加权…');
+    const hotTop = useSector ? boomHotTop() : null;
+    const concepts = await loadBoomConcepts();
+    final.forEach(c => { c.score = boomScoreOf(c, hotTop); c.minScore = minScore; });
+    const out = final.filter(c => c.score.total >= minScore).sort((a, b) => b.score.total - a.score.total);
+    BOOM_STATE.newsSkip = BOOM_STATE.newsSkip || 0;
+    boomRender(out, hotTop, concepts);
+    setProg(100, `完成：候选 ${out.length} 只（≥${minScore}分）· 涨停基因 ${genes.size} → 全市场过滤 ${cands.length} → K线通过 ${passed.length} → 最终 ${out.length}`);
+  } catch (e){
+    setProg(0, '扫描失败：' + e.message + '（可稍后重试）');
+    $('#boomBody').innerHTML = '';
+    $('#boomEmpty').style.display = 'block';
+    $('#boomEmpty').textContent = '扫描失败：' + e.message;
+  } finally {
+    BOOM_STATE.running = false;
+    $('#boomRun').disabled = false;
+  }
+}
+
+/* ============================================================
  * 自动刷新（盘中模式）
  * 说明：盘中定时刷新「当日涨停池 + 连板」，保证封板/炸板/连板数实时。
  *       龙虎榜盘后约 17:00 才披露，不参与自动刷新，需手动点「刷新」。
@@ -1543,6 +2126,455 @@ function renderSectorNews(){
 }
 
 /* ============================================================
+ * 情绪周期龙头战法（v6 新增）
+ * 模块：①五阶段定位 ②仓位建议 ③主线梯队真龙 ④黄金买点 ⑤低位补涨
+ * 数据源：push2ex 涨停/跌停池 / push2delay clist 全市场 / 腾讯 fqkline K线
+ * ============================================================ */
+const EMO_PHASES = {
+  ice:    { name: '冰点期', color: '#718096', pos: '0 ~ 10%', action: '空仓防守，仅在跌停数骤减+连板高度止跌的转折点，用极轻仓试错新题材破冰首板。管住手，不抄底。' },
+  start:  { name: '启动期', color: '#48bb78', pos: '20 ~ 30%', action: '轻仓出击最先封板的强先锋或一进二换手板，不抢冷门和无板块效应标的。旧主线退潮、新题材批量首板时确认。' },
+  main:   { name: '主升期', color: '#f56565', pos: '50 ~ 80%', action: '重仓围绕主线真龙头，做首次良性分歧低吸或弱转强确认。空间龙打出辨识度、梯队完整（龙+中位+补涨+中军放量）时敢于推仓。' },
+  climax: { name: '高潮期', color: '#ed8936', pos: '逐步降至 30% 以下', action: '只卖不买，分批减仓，去弱留强。板块批量涨停、中位秒板、缩量加速、垃圾股补涨时是盛极而衰预警，防范极致一致后炸板负反馈。' },
+  fade:   { name: '退潮期', color: '#1a202c', pos: '0%', action: '无条件清仓，停止一切低吸和打板尝试。高度标被核按钮闷杀、A字杀、中位成排跌停、亏钱效应扩散时，踏错节奏强行交易极易销户。' }
+};
+
+/* ---------- 跌停池 ---------- */
+async function loadDTPool(dateStr){
+  const url = `${API.dtPool}?ut=${ZT_UT}&dpt=wz.ztzt&Pageindex=0&pagesize=600&sort=fund%3Aasc&date=${ymdn(new Date(dateStr))}`;
+  let j = null, lastErr = null;
+  for (let i = 0; i < 3; i++){
+    try { j = await fetchJSON(url); break; }
+    catch (e){ lastErr = e; if (i < 2) await new Promise(r => setTimeout(r, 700 * (i + 1))); }
+  }
+  if (!j) return [];
+  const pool = (j && j.data && j.data.pool) || [];
+  return pool.map(it => ({
+    code: String(it.c), name: it.n, price: (it.p || 0) / 1000,
+    zdp: it.zdp || 0, ltsz: it.ltsz || 0, hybk: it.hybk || '—',
+    fund: it.fund || 0, date: dateStr
+  }));
+}
+
+/* ---------- 全市场行情（复用 clist，返回 Map<code, item>） ---------- */
+async function emoLoadMarket(conc, onProgress){
+  const total = 6000, pageSize = 100;
+  const pages = Array.from({ length: Math.ceil(total / pageSize) }, (_, i) => i + 1);
+  const got = await pMapLimit(pages, Math.min(conc, 10), async p => {
+    const url = `${API.clist}?pn=${p}&pz=${pageSize}&po=1&np=1&fltt=2&invt=2&fid=f12&fs=${BOOM_FS}&fields=f2,f3,f5,f6,f8,f10,f12,f14,f21`;
+    const j = await fetchCors(url);
+    return (j && j.data && j.data.diff) || [];
+  }, onProgress);
+  const map = new Map();
+  got.flat().forEach(it => {
+    if (!it || !it.f12) return;
+    const code = String(it.f12);
+    if (map.has(code)) return;
+    map.set(code, {
+      code, name: String(it.f14 || ''), price: it.f2 != null ? +it.f2 : 0,
+      zdp: it.f3 != null ? +it.f3 : null, vol: it.f5 || 0, amount: it.f6 || 0,
+      turnover: it.f8 != null ? +it.f8 : 0, volRatio: it.f10 != null ? +it.f10 : 0,
+      ltsz: it.f21 || 0
+    });
+  });
+  return map;
+}
+
+/* ---------- 情绪阶段判定 ---------- */
+function emoDetectPhase(ctx){
+  const { maxLb, ztCount, dtCount, lb3Count, yestPremium, yestTopAlive } = ctx;
+  /* 优先级：退潮 > 冰点 > 高潮 > 主升 > 启动 */
+  /* 退潮：跌停多 + (昨日最高板今日断板 或 高度极低) */
+  if (dtCount >= 10 && (!yestTopAlive || maxLb <= 2)) return 'fade';
+  /* 冰点：高度压制2~3板 + 跌停10~20家 */
+  if (maxLb <= 3 && dtCount >= 10) return 'ice';
+  /* 高潮：批量涨停(≥80) + 中位秒板(连板≥3家数≥10) */
+  if (ztCount >= 80 && lb3Count >= 10) return 'climax';
+  /* 主升：空间龙≥4~5板突破压制 + 涨停≥40 */
+  if (maxLb >= 4 && ztCount >= 40) return 'main';
+  /* 启动：首板潮(涨停≥30) + 跌停减少(<10) + 高度≤3 */
+  if (ztCount >= 30 && dtCount < 10 && maxLb <= 3) return 'start';
+  /* 边界情况：高度≥4但涨停不足40，偏启动/主升过渡 */
+  if (maxLb >= 4) return 'main';
+  /* 默认：启动 */
+  return 'start';
+}
+
+/* ---------- 主线梯队构建 ---------- */
+function emoBuildLadder(ztPool, marketMap){
+  /* 按板块分组 */
+  const groups = new Map();
+  ztPool.forEach(s => {
+    const k = s.hybk || '—';
+    if (!groups.has(k)) groups.set(k, []);
+    groups.get(k).push(s);
+  });
+  /* 按涨停数排序，取前3个板块 */
+  const sorted = Array.from(groups.entries())
+    .map(([name, stocks]) => ({
+      name, stocks,
+      ztCount: stocks.length,
+      maxLb: Math.max.apply(null, stocks.map(s => s.lbc || 0)),
+      totalFund: stocks.reduce((a, s) => a + (s.fund || 0), 0)
+    }))
+    .sort((a, b) => b.ztCount - a.ztCount || b.maxLb - a.maxLb)
+    .slice(0, 3);
+
+  /* 计算近期平均高度（用于"率先打破压制"判断） */
+  const allMaxLb = sorted.length ? sorted[0].maxLb : 0;
+
+  return sorted.map(g => {
+    const stocks = g.stocks.slice().sort((a, b) => b.lbc - a.lbc || (b.fund || 0) - (a.fund || 0));
+    const dragon = stocks[0]; // 连板最高
+    const mid = stocks.filter(s => s.lbc >= 2 && s.lbc <= 4 && s !== dragon);
+    const first = stocks.filter(s => s.lbc === 1);
+    /* 百亿中军：板块内成交额最大且流通市值≥100亿（从涨停池+全市场匹配） */
+    let midCap = null;
+    const sectorCodes = new Set(stocks.map(s => s.code));
+    if (marketMap){
+      let maxAmt = 0;
+      marketMap.forEach(m => {
+        if (sectorCodes.has(m.code) && m.zdp > 3 && m.amount > maxAmt && m.ltsz >= 100e8){
+          maxAmt = m.amount;
+          midCap = m;
+        }
+      });
+    }
+    /* 若涨停池内无百亿中军，取板块内成交额最大的涨停股 */
+    if (!midCap){
+      const big = stocks.filter(s => s.ltsz >= 50e8).sort((a, b) => (b.amount || 0) - (a.amount || 0))[0];
+      if (big) midCap = { code: big.code, name: big.name, price: big.price, zdp: big.zdp, amount: big.amount, ltsz: big.ltsz };
+    }
+    /* 真龙判定：连板身位最高 + 板块涨停≥3 + 率先打破近期高度(最高板≥4或>板块平均) */
+    const isDragon = dragon && g.ztCount >= 3 && (dragon.lbc >= 4 || dragon.lbc >= allMaxLb);
+    return { ...g, dragon, mid, first, midCap, isDragon, stocks };
+  });
+}
+
+/* ---------- 黄金买点扫描 ---------- */
+function emoScanGolden(genes, ztPool, dtPool, marketMap){
+  const todayCodes = new Set(ztPool.map(s => s.code));
+  const dtSectors = new Set(dtPool.map(s => s.hybk));
+  const out = [];
+  genes.forEach((g, code) => {
+    if (todayCodes.has(code)) return; // 今日涨停的不算分歧
+    if (g.maxLb < 2) return; // 需主升途中（近N日有过≥2板）
+    const m = marketMap.get(code);
+    if (!m) return;
+    if (/ST/i.test(m.name)) return;
+    /* 板块内无跌停负反馈 */
+    if (dtSectors.has(g.hybk)) return;
+    /* 分歧迹象：涨幅 -3%~5%（未涨停但有承接），量比>1.2（放量） */
+    if (m.zdp == null || m.zdp >= 9.5 || m.zdp <= -5) return;
+    if (m.volRatio < 1.2) return;
+    /* 信号类型 */
+    let signalType, signalDesc;
+    if (m.zdp > 0 && m.volRatio >= 1.5){
+      signalType = '弱转强确认';
+      signalDesc = '分时企稳带量翻红，可关注加仓信号';
+    } else if (m.zdp <= 0 && m.volRatio >= 1.5){
+      signalType = '分歧日尾盘';
+      signalDesc = '爆量分歧但板块未灭，关注尾盘低吸机会';
+    } else {
+      signalType = '温和分歧';
+      signalDesc = '量能温和放大，持续观察';
+    }
+    out.push({
+      code, name: m.name, price: m.price, zdp: m.zdp,
+      volRatio: m.volRatio, ltsz: m.ltsz, hybk: g.hybk,
+      geneDays: g.ztCount, maxLb: g.maxLb, lastDate: g.lastDate,
+      signalType, signalDesc
+    });
+  });
+  out.sort((a, b) => b.volRatio - a.volRatio);
+  return out;
+}
+
+/* ---------- 低位补涨扫描 ---------- */
+async function emoScanLow(ladder, genes, marketMap, conc, onProgress){
+  if (!ladder.length) return [];
+  /* 主线板块：取涨停最多的板块 */
+  const mainSector = ladder[0];
+  const mainSectorName = mainSector.name;
+  /* 候选：该板块相关股票（从基因库+全市场中找名称含板块关键词的） */
+  const candidates = [];
+  const todayCodes = new Set();
+  mainSector.stocks.forEach(s => todayCodes.add(s.code));
+  /* 从基因库中找同板块但今日未涨停、涨幅<20%的 */
+  genes.forEach((g, code) => {
+    if (g.hybk !== mainSectorName) return;
+    if (todayCodes.has(code)) return;
+    const m = marketMap.get(code);
+    if (!m || /ST/i.test(m.name)) return;
+    if (m.volRatio < 1.5) return;
+    candidates.push({ code, gene: g, market: m });
+  });
+  /* 逐股拉K线判断多头排列和本轮涨幅 */
+  const got = await pMapLimit(candidates, conc, async c => {
+    try {
+      const url = `${API.kline}?param=${boomSecid(c.code)},day,,,60,qfq`;
+      const j = await fetchCors(url);
+      const d = (j && j.data && j.data[boomSecid(c.code)]) || {};
+      const kl = d.qfqday || d.day || [];
+      if (kl.length < 30) return null;
+      const st = boomKlineStats(kl);
+      /* 多头排列：MA5>MA10>MA20 */
+      if (!(st.ma5 > st.ma10 && st.ma10 > st.ma20)) return null;
+      /* 本轮涨幅：近20日涨幅 <20% */
+      const closes = kl.map(k => +k[2]);
+      const oldPx = closes[Math.max(0, closes.length - 20)] || closes[0];
+      const roundGain = oldPx > 0 ? (st.cur / oldPx - 1) * 100 : 0;
+      if (roundGain >= 20) return null;
+      return { ...c, kline: st, roundGain };
+    } catch (e){ return null; }
+  }, onProgress);
+  const out = got.filter(Boolean).map(c => ({
+    code: c.code, name: c.market.name, price: c.market.price,
+    zdp: c.market.zdp, ltsz: c.market.ltsz, volRatio: c.market.volRatio,
+    roundGain: c.roundGain, ma5: c.kline.ma5, ma10: c.kline.ma10, ma20: c.kline.ma20,
+    hybk: c.gene.hybk, reason: '主线板块低位+多头排列+放量'
+  }));
+  out.sort((a, b) => b.volRatio - a.volRatio);
+  return out;
+}
+
+/* ---------- 渲染 ---------- */
+function emoRenderPhase(phase, ctx){
+  $$('#emoPhaseBar .seg').forEach(s => s.classList.toggle('active', s.dataset.phase === phase));
+  const p = EMO_PHASES[phase];
+  $('#emoPosPhase').innerHTML = '<span style="color:' + p.color + '">' + p.name + '</span>';
+  $('#emoPosRange').textContent = p.pos;
+  $('#emoPosRange').style.color = p.color;
+  $('#emoPosAction').textContent = p.action;
+  /* KPI */
+  const kpis = [
+    { k: '当前连板最高', v: ctx.maxLb ? ctx.maxLb + '板' : '—', cls: ctx.maxLb >= 4 ? 'up' : '' },
+    { k: '今日涨停家数', v: ctx.ztCount, cls: 'up' },
+    { k: '今日跌停家数', v: ctx.dtCount, cls: ctx.dtCount >= 10 ? 'down' : '' },
+    { k: '连板≥3家数', v: ctx.lb3Count, cls: '' },
+    { k: '昨日涨停今日溢价', v: ctx.yestPremium != null ? fmtPct(ctx.yestPremium) : '—', cls: ctx.yestPremium > 0 ? 'up' : 'down' },
+    { k: '昨日最高板今日', v: ctx.yestTopAlive != null ? (ctx.yestTopAlive ? '存活' : '断板') : '—', cls: ctx.yestTopAlive ? 'up' : 'down' }
+  ];
+  $('#emoKpis').innerHTML = kpis.map(k =>
+    '<div class="emo-kpi"><div class="k">' + k.k + '</div><div class="v ' + k.cls + '">' + k.v + '</div></div>'
+  ).join('');
+}
+
+function emoRenderLadder(ladder){
+  const box = $('#emoLadder');
+  if (!ladder.length){ box.innerHTML = '<div class="empty">当日无涨停板块数据</div>'; return; }
+  box.innerHTML = '';
+  ladder.forEach(g => {
+    let html = '<div class="emo-ladder" style="margin-bottom:14px">';
+    html += '<div class="sector-head">';
+    html += '<span class="sn">' + esc(g.name) + '</span>';
+    html += '<span class="tag lb">' + g.ztCount + ' 涨停</span>';
+    html += '<span class="tag lhb">最高 ' + g.maxLb + ' 板</span>';
+    if (g.isDragon) html += '<span class="badge dragon">★ 真龙板块</span>';
+    html += '</div>';
+    /* 空间龙 */
+    if (g.dragon){
+      html += '<div class="tier-row"><div class="tier-label"><div class="n">' + g.dragon.lbc + '板</div><div class="l">空间龙</div></div>';
+      html += '<div class="tier-cards">';
+      html += '<div class="emo-stock dragon" data-code="' + g.dragon.code + '">';
+      html += '<div class="nm"><span class="dragon-mark">龙</span>' + esc(g.dragon.name) + '</div>';
+      html += '<div class="cd">' + g.dragon.code + '</div>';
+      html += '<div class="ms">封单 ' + fmtY(g.dragon.fund) + ' · 换手 ' + g.dragon.hs.toFixed(1) + '%</div>';
+      html += '</div></div></div>';
+    }
+    /* 中位助攻 */
+    if (g.mid.length){
+      html += '<div class="tier-row"><div class="tier-label"><div class="n">2-4</div><div class="l">中位助攻</div></div>';
+      html += '<div class="tier-cards">';
+      g.mid.slice(0, 8).forEach(s => {
+        html += '<div class="emo-stock" data-code="' + s.code + '">';
+        html += '<div class="nm">' + esc(s.name) + ' <span style="color:var(--red);font-size:10px">' + s.lbc + '板</span></div>';
+        html += '<div class="cd">' + s.code + '</div>';
+        html += '<div class="ms">封单 ' + fmtY(s.fund) + '</div>';
+        html += '</div>';
+      });
+      html += '</div></div>';
+    }
+    /* 低位首板 */
+    if (g.first.length){
+      html += '<div class="tier-row"><div class="tier-label"><div class="n">1板</div><div class="l">低位首板</div></div>';
+      html += '<div class="tier-cards">';
+      g.first.slice(0, 10).forEach(s => {
+        html += '<div class="emo-stock" data-code="' + s.code + '">';
+        html += '<div class="nm">' + esc(s.name) + '</div>';
+        html += '<div class="cd">' + s.code + '</div>';
+        html += '<div class="ms">首封 ' + (s.fbt ? String(s.fbt).slice(0,2) + ':' + String(s.fbt).slice(2,4) : '—') + ' · 换手 ' + s.hs.toFixed(1) + '%</div>';
+        html += '</div>';
+      });
+      html += '</div></div>';
+    }
+    /* 百亿中军 */
+    if (g.midCap){
+      html += '<div class="tier-row"><div class="tier-label"><div class="n" style="font-size:13px">中军</div><div class="l">百亿趋势</div></div>';
+      html += '<div class="tier-cards">';
+      html += '<div class="emo-stock" data-code="' + g.midCap.code + '" style="border-color:var(--gold)">';
+      html += '<div class="nm"><span style="color:var(--gold);font-size:9px;font-weight:700">★中军</span> ' + esc(g.midCap.name) + '</div>';
+      html += '<div class="cd">' + g.midCap.code + '</div>';
+      html += '<div class="ms">涨跌 <span class="' + clsOf(g.midCap.zdp) + '">' + fmtPct(g.midCap.zdp) + '</span> · 市值 ' + fmtY(g.midCap.ltsz) + ' · 成交 ' + fmtY(g.midCap.amount) + '</div>';
+      html += '</div></div></div>';
+    }
+    html += '</div>';
+    box.insertAdjacentHTML('beforeend', html);
+  });
+  /* 点击股票打开明细 */
+  $$('#emoLadder .emo-stock').forEach(el => {
+    el.addEventListener('click', () => {
+      const code = el.dataset.code;
+      const s = state.ztPool.find(x => x.code === code);
+      if (s){
+        const ctx = { lhbMap: {}, industryZtCount: {} };
+        state.ztPool.forEach(x => { ctx.industryZtCount[x.hybk] = (ctx.industryZtCount[x.hybk] || 0) + 1; });
+        state.lhb.forEach(r => { ctx.lhbMap[r.code] = r; });
+        openDetail(code, state.ztPool);
+      }
+    });
+  });
+}
+
+function emoRenderGolden(list){
+  const box = $('#emoGolden');
+  if (!list.length){ box.innerHTML = '<div class="empty">当前无黄金买点信号（近N日涨停股今日未出现分歧迹象，或板块有跌停负反馈）</div>'; return; }
+  box.innerHTML = '';
+  list.slice(0, 12).forEach(s => {
+    const typeColor = s.signalType === '弱转强确认' ? 'var(--red)' : (s.signalType === '分歧日尾盘' ? 'var(--amber)' : 'var(--muted)');
+    box.insertAdjacentHTML('beforeend',
+      '<div class="emo-signal">' +
+        '<div class="head"><span class="dot"></span><span class="t">' + esc(s.name) + '（' + s.code + '）</span>' +
+        '<span class="type" style="color:' + typeColor + ';border-color:' + typeColor + '">' + s.signalType + '</span></div>' +
+        '<div class="body">' +
+          '<b>现价</b> ' + s.price.toFixed(2) + ' · <b>今日涨跌</b> <span class="' + clsOf(s.zdp) + '">' + fmtPct(s.zdp) + '</span> · ' +
+          '<b>量比</b> ' + s.volRatio.toFixed(2) + ' · <b>流通市值</b> ' + fmtY(s.ltsz) + ' · ' +
+          '<b>所属板块</b> ' + esc(s.hybk) + ' · <b>涨停基因</b> ' + s.geneDays + '次（最高' + s.maxLb + '板，最近' + s.lastDate + '）<br>' +
+          '<b style="color:var(--gold)">信号：</b>' + s.signalDesc +
+        '</div>' +
+      '</div>');
+  });
+}
+
+function emoRenderLow(list){
+  const body = $('#emoLowBody');
+  const empty = $('#emoLowEmpty');
+  if (!list.length){ body.innerHTML = ''; empty.style.display = 'block'; return; }
+  empty.style.display = 'none';
+  body.innerHTML = '';
+  list.forEach(s => {
+    body.insertAdjacentHTML('beforeend',
+      '<tr>' +
+        '<td class="l">' + s.code + '</td>' +
+        '<td class="name">' + esc(s.name) + '</td>' +
+        '<td>' + s.price.toFixed(2) + '</td>' +
+        '<td class="' + clsOf(s.zdp) + '">' + fmtPct(s.zdp) + '</td>' +
+        '<td>' + fmtY(s.ltsz) + '</td>' +
+        '<td class="' + clsOf(s.roundGain) + '">' + fmtPct(s.roundGain) + '</td>' +
+        '<td>' + s.volRatio.toFixed(2) + '</td>' +
+        '<td style="font-size:11px">MA5 ' + s.ma5.toFixed(2) + '<br>MA10 ' + s.ma10.toFixed(2) + '<br>MA20 ' + s.ma20.toFixed(2) + '</td>' +
+        '<td class="l">' + esc(s.hybk) + '</td>' +
+        '<td class="l" style="font-size:11px;color:var(--muted)">' + s.reason + '</td>' +
+      '</tr>');
+  });
+}
+
+/* ---------- 主流程 ---------- */
+async function runEmotion(){
+  if (EMO_STATE.running) return;
+  if (!state.ztPool.length){ alert('请先加载交易日数据'); return; }
+  EMO_STATE.running = true;
+  const btn = $('#emoRun');
+  btn.disabled = true;
+  $('#emoProgress').style.display = 'block';
+  const setBar = p => { $('#emoBar').style.width = p + '%'; };
+  const setSt = t => { $('#emoStatus').textContent = t; };
+
+  try {
+    const dateStr = ymd(state.date);
+    const days = +$('#emoDays').value || 15;
+    const conc = +$('#emoConc').value || 6;
+    const lowScan = $('#emoLowScan').checked;
+
+    /* 阶段1：跌停池 */
+    setSt('正在加载跌停池…');
+    setBar(8);
+    const dtPool = await loadDTPool(dateStr).catch(e => { console.warn(e); return []; });
+
+    /* 阶段2：近N日涨停基因 */
+    setSt('正在拉取近' + days + '日涨停基因…');
+    setBar(18);
+    const genes = await boomLoadGenes(days, (d, n) => setSt('涨停基因 ' + d + '/' + n));
+
+    /* 阶段3：全市场行情 */
+    setSt('正在加载全市场实时行情（约60页）…');
+    setBar(35);
+    const marketMap = await emoLoadMarket(conc, (d, n) => { setSt('全市场行情 ' + d + '/' + n + ' 页'); setBar(35 + d / n * 25); });
+
+    /* 阶段4：计算情绪指标 */
+    setSt('正在计算情绪周期指标…');
+    setBar(65);
+    const ztPool = state.ztPool;
+    const maxLb = ztPool.reduce((m, s) => Math.max(m, s.lbc || 0), 0);
+    const lb3Count = ztPool.filter(s => s.lbc >= 3).length;
+    /* 昨日涨停今日溢价：昨日涨停股今日涨跌幅均值 */
+    let yestPremium = null, yestTopAlive = null;
+    if (state.near3.length >= 2){
+      const yestPool = state.near3[1];
+      const yestTop = yestPool.reduce((m, s) => (!m || s.lbc > m.lbc ? s : m), null);
+      if (yestTop){
+        const tm = marketMap.get(yestTop.code);
+        yestTopAlive = tm ? tm.zdp >= 9.5 : false;
+      }
+      const premiums = [];
+      yestPool.forEach(s => {
+        const m = marketMap.get(s.code);
+        if (m && m.zdp != null) premiums.push(m.zdp);
+      });
+      if (premiums.length) yestPremium = premiums.reduce((a, b) => a + b, 0) / premiums.length;
+    }
+
+    const ctx = { maxLb, ztCount: ztPool.length, dtCount: dtPool.length, lb3Count, yestPremium, yestTopAlive };
+    const phase = emoDetectPhase(ctx);
+
+    /* 阶段5：主线梯队 */
+    setSt('正在构建主线梯队…');
+    setBar(75);
+    const ladder = emoBuildLadder(ztPool, marketMap);
+
+    /* 阶段6：黄金买点 */
+    setSt('正在扫描黄金买点信号…');
+    setBar(82);
+    const golden = emoScanGolden(genes, ztPool, dtPool, marketMap);
+
+    /* 阶段7：低位补涨 */
+    let low = [];
+    if (lowScan){
+      setSt('正在扫描低位补涨标的（需K线，较慢）…');
+      setBar(88);
+      low = await emoScanLow(ladder, genes, marketMap, conc, (d, n) => setSt('低位补涨 K线 ' + d + '/' + n));
+    }
+
+    /* 渲染 */
+    setSt('分析完成');
+    setBar(100);
+    emoRenderPhase(phase, ctx);
+    emoRenderLadder(ladder);
+    emoRenderGolden(golden);
+    emoRenderLow(low);
+    $('#cntEmotion').textContent = golden.length + low.length;
+
+  } catch (e){
+    console.error(e);
+    $('#emoStatus').innerHTML = '<span style="color:var(--red)">分析失败：' + esc(e.message || String(e)) + '，请重试</span>';
+  } finally {
+    EMO_STATE.running = false;
+    btn.disabled = false;
+    setTimeout(() => { $('#emoProgress').style.display = 'none'; }, 800);
+  }
+}
+const EMO_STATE = { running: false };
+
+/* ============================================================
  * 启动
  * ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
@@ -1551,6 +2583,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initTabs();
   bindLHBSort();
   loadAll();
+  $('#boomRun').addEventListener('click', runBoom);
+  $('#emoRun').addEventListener('click', runEmotion);
 });
 </script>
 </body>
