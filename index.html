@@ -349,6 +349,81 @@
   .emo-run-bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:12px;margin-top:12px}
   .emo-note{font-size:11px;color:var(--dim);line-height:1.7;margin-top:8px}
   .emo-note b{color:var(--muted)}
+  /* 退学买点 */
+  .emo-exit-layout{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin-top:10px}
+  .emo-exit-card{background:var(--panel2);border:1px solid var(--border);border-radius:12px;padding:12px;display:flex;flex-direction:column}
+  .emo-exit-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px;padding-bottom:8px;border-bottom:1px dashed #1e2b3a}
+  .emo-exit-name{font-size:13px;font-weight:700}
+  .emo-exit-tag{font-size:10px;border-radius:4px;padding:1px 6px;font-weight:700;flex:none}
+  .emo-exit-tag.core{background:var(--red-soft);color:var(--red);border:1px solid #f6465d4d}
+  .emo-exit-tag.violent{background:var(--amber-soft);color:var(--amber);border:1px solid #f0a63c4d}
+  .emo-exit-tag.hard{background:#5f718333;color:var(--muted);border:1px solid #5f71834d}
+  .emo-exit-stage{font-size:10px;color:var(--dim);border:1px solid var(--border);border-radius:4px;padding:1px 5px;margin-left:auto}
+  .emo-exit-rules{font-size:11px;color:var(--muted);line-height:1.85;margin-bottom:10px}
+  .emo-exit-rules b{color:var(--text);font-weight:600}
+  .emo-exit-stocks{flex:1;min-height:40px}
+  .emo-exit-stock{background:var(--panel3);border:1px solid var(--border2);border-radius:8px;padding:8px 10px;margin-bottom:6px;cursor:pointer;transition:border-color .15s}
+  .emo-exit-stock:hover{border-color:var(--red)}
+  .emo-exit-stock .nm{font-size:12px;font-weight:700;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  .emo-exit-stock .cd{font-size:10px;color:var(--dim);font-family:var(--mono)}
+  .emo-exit-stock .ms{font-size:10px;color:var(--muted);margin-top:4px;font-family:var(--mono);display:flex;gap:10px;flex-wrap:wrap}
+  .emo-exit-stock .ms b{color:var(--text);font-weight:600}
+  .emo-exit-empty{font-size:11px;color:var(--dim);text-align:center;padding:14px 0}
+  .emo-exit-count{font-size:10px;color:var(--gold);font-weight:700;margin-left:4px}
+  /* 补涨龙挖掘 */
+  .low-timing-bar{display:flex;gap:10px;margin:10px 0 8px;align-items:stretch}
+  .timing-node{flex:1;background:var(--panel2);border:1px solid var(--border);border-radius:10px;padding:10px 12px;transition:all .2s;min-width:0}
+  .timing-node.active{border-color:var(--gold);background:linear-gradient(135deg,rgba(240,166,60,0.08),rgba(240,166,60,0.02));box-shadow:0 0 12px rgba(240,166,60,0.15)}
+  .timing-node.inactive{opacity:0.5}
+  .tn-head{display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap}
+  .tn-badge{font-size:10px;font-weight:700;background:var(--panel3);color:var(--muted);border-radius:4px;padding:2px 6px;flex:none}
+  .tn-badge.gold{background:var(--gold-soft);color:var(--gold)}
+  .timing-node.active .tn-badge{background:var(--gold);color:#000}
+  .tn-name{font-size:12px;font-weight:700;color:var(--text)}
+  .tn-desc{font-size:10.5px;color:var(--dim);line-height:1.6;margin-bottom:6px}
+  .tn-status{font-size:11px;font-weight:600;color:var(--muted)}
+  .timing-node.active .tn-status{color:var(--gold)}
+  .timing-connector{display:flex;flex-direction:column;align-items:center;justify-content:center;flex:none;width:24px}
+  .tc-line{width:1px;height:20px;background:var(--border)}
+  .tc-arrow{font-size:10px;color:var(--border);margin-top:-2px}
+  .low-timing-result{background:var(--panel2);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:8px 12px;margin-bottom:10px;font-size:11.5px;color:var(--muted);line-height:1.6}
+  .low-timing-result b{color:var(--gold)}
+  .low-filter-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+  .lf-tag{font-size:10px;background:var(--panel3);border:1px solid var(--border2);border-radius:4px;padding:3px 8px;color:var(--muted)}
+  .lf-tag b{color:var(--text);font-weight:600}
+  .lf-tag.pure{border-color:var(--red);color:var(--red)}
+  .lf-tag.pure b{color:var(--red)}
+  .lf-tag.confirm{border-color:var(--gold);color:var(--gold)}
+  .lf-tag.confirm b{color:var(--gold)}
+  .lf-tag.ma{border-color:var(--green);color:var(--green)}
+  .lf-tag.ma b{color:var(--green)}
+  .low-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:10px}
+  .low-card{background:var(--panel2);border:1px solid var(--border);border-radius:12px;padding:12px;transition:border-color .15s;cursor:pointer}
+  .low-card:hover{border-color:var(--gold)}
+  .low-card.separation{border-color:var(--gold);background:linear-gradient(135deg,rgba(240,166,60,0.06),transparent)}
+  .lc-head{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+  .lc-name{font-size:14px;font-weight:700;color:var(--text)}
+  .lc-code{font-size:11px;color:var(--dim);font-family:var(--mono)}
+  .lc-status{font-size:9px;font-weight:700;border-radius:4px;padding:2px 6px;margin-left:auto}
+  .lc-status.started{background:var(--red-soft);color:var(--red);border:1px solid #f6465d4d}
+  .lc-status.potential{background:var(--panel3);color:var(--muted);border:1px solid var(--border)}
+  .lc-kpis{display:flex;gap:12px;margin-bottom:8px;flex-wrap:wrap}
+  .lc-kpi{font-size:11px;color:var(--muted)}
+  .lc-kpi b{color:var(--text);font-weight:600;font-size:12px}
+  .lc-kpi .up{color:var(--red)}
+  .lc-kpi .down{color:var(--green)}
+  .lc-checks{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px}
+  .lc-check{font-size:9.5px;border-radius:3px;padding:2px 5px;font-weight:600}
+  .lc-check.pass{background:rgba(82,196,26,0.12);color:#52C41A;border:1px solid rgba(82,196,26,0.3)}
+  .lc-check.fail{background:rgba(95,113,131,0.1);color:var(--dim);border:1px solid var(--border2)}
+  .lc-check.highlight{background:var(--gold-soft);color:var(--gold);border:1px solid rgba(240,166,60,0.4)}
+  .lc-trade{background:var(--panel3);border-radius:8px;padding:8px 10px;font-size:10.5px;line-height:1.8}
+  .lc-trade .row{display:flex;gap:6px}
+  .lc-trade .label{flex:none;width:48px;font-weight:700}
+  .lc-trade .label.buy{color:var(--red)}
+  .lc-trade .label.add{color:var(--gold)}
+  .lc-trade .label.sell{color:var(--green)}
+  .lc-trade .val{color:var(--muted);flex:1}
 </style>
 </head>
 <body>
@@ -690,7 +765,7 @@
       <div class="view" id="view-emotion">
         <div class="hint">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-          情绪周期龙头战法 = 五阶段定位（冰点/启动/主升/高潮/退潮）+ 仓位建议 + 主线梯队真龙辨识 + 黄金买点（首次良性分歧）+ 低位补涨挖掘。基于《野人哥交易实战笔记》方法论，数据为公开接口实时计算，仅供参考。
+          情绪周期龙头战法 = 五阶段定位（冰点/启动/主升/高潮/退潮）+ 仓位建议 + 主线梯队真龙辨识 + 黄金买点（首次良性分歧）+ 补涨龙挖掘（时机锁定+三低一纯+分离确认）+ 退学买点（三模式）。基于《野人哥交易实战笔记》方法论，数据为公开接口实时计算，仅供参考。
         </div>
         <div class="emo-run-bar">
           <div class="fitem" style="margin:0">
@@ -710,7 +785,7 @@
             </select>
           </div>
           <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);cursor:pointer">
-            <input type="checkbox" id="emoLowScan" checked> 启用低位补涨扫描（需K线，较慢）
+            <input type="checkbox" id="emoLowScan" checked> 启用补涨龙扫描（时机锁定+三低一纯+K线，较慢）
           </label>
           <button class="btn primary" id="emoRun">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
@@ -749,23 +824,94 @@
         <div class="emo-section-title">④ 黄金买点监控（首次良性分歧）</div>
         <div id="emoGolden"></div>
 
-        <!-- 模块5：低位补涨 -->
-        <div class="emo-section-title">⑤ 低位补涨挖掘（高位切低位）</div>
-        <div class="table-wrap" style="margin-top:8px">
-          <table id="emoLowTable" class="emo-low-table">
-            <thead>
-              <tr>
-                <th>代码</th><th>名称</th><th>现价</th><th>今日涨跌</th><th>流通市值</th>
-                <th>本轮涨幅</th><th>量比</th><th>均线</th><th>所属板块</th><th>入选理由</th>
-              </tr>
-            </thead>
-            <tbody id="emoLowBody"></tbody>
-          </table>
+        <!-- 模块5：补涨龙挖掘 -->
+        <div class="emo-section-title">⑤ 补涨龙挖掘（时机锁定 · 三低一纯 · 分离确认）</div>
+
+        <!-- 时机指示器 -->
+        <div class="low-timing-bar" id="lowTimingBar">
+          <div class="timing-node" id="timingNode1">
+            <div class="tn-head"><span class="tn-badge">节点一</span><span class="tn-name">龙头缩量加速期</span></div>
+            <div class="tn-desc">龙头连续缩量一字板（买不进），踏空资金急需宣泄口 → 板块内第一个换手二板</div>
+            <div class="tn-status" id="timing1Status">等待检测…</div>
+          </div>
+          <div class="timing-connector"><div class="tc-line"></div><div class="tc-arrow">▶</div></div>
+          <div class="timing-node" id="timingNode2">
+            <div class="tn-head"><span class="tn-badge gold">节点二</span><span class="tn-name">龙头断板分歧日（黄金窗口）</span></div>
+            <div class="tn-desc">龙头爆量断板（未跌停）或尾盘漏单 → 板块内逆势拉起的首板/二板，阻力最小</div>
+            <div class="tn-status" id="timing2Status">等待检测…</div>
+          </div>
         </div>
-        <div class="empty" id="emoLowEmpty" style="display:none">暂无低位补涨候选，或未启用低位补涨扫描。</div>
+        <div class="low-timing-result" id="lowTimingResult" style="display:none"></div>
+
+        <!-- 筛选条件标签 -->
+        <div class="low-filter-bar">
+          <span class="lf-tag"><b>低股价</b> &lt;10元</span>
+          <span class="lf-tag"><b>低市值</b> 30-80亿</span>
+          <span class="lf-tag"><b>低位</b> 60日涨幅&lt;30%</span>
+          <span class="lf-tag pure"><b>纯血统</b> 同龙头属性</span>
+          <span class="lf-tag confirm"><b>分离确认</b> 龙头跌它涨停</span>
+          <span class="lf-tag ma"><b>均线多头</b> 5&gt;10&gt;20</span>
+        </div>
+
+        <!-- 候选股卡片 -->
+        <div class="low-cards" id="lowCards"></div>
+        <div class="empty" id="emoLowEmpty" style="display:none">暂无补涨龙候选。需同时满足：主线板块 + 三低一纯 + 均线多头排列 + 放量。龙头断板日出现概率最高。</div>
+
+        <!-- ⑥ 退学买点 -->
+        <div class="emo-section-title">⑥ 退学买点（三模式自动识别 · 预期买卖点）</div>
+        <div class="emo-exit-layout" id="emoExitLayout">
+          <!-- 买点一 -->
+          <div class="emo-exit-card">
+            <div class="emo-exit-head">
+              <span class="emo-exit-name">买点一：首次大分歧低吸</span>
+              <span class="emo-exit-tag core">最核心</span>
+              <span class="emo-exit-stage">主升期</span>
+            </div>
+            <div class="emo-exit-rules">
+              <div><b>目标：</b>市场总空间龙（近N日≥4板，人气最旺）</div>
+              <div><b>信号：</b>爆量烂板/首阴/尾盘漏单（量比≥1.5）+ 板块无跌停负反馈</div>
+              <div><b>买点：</b>① 分歧日尾盘分时企稳拿底仓 ② 次日带量上攻翻红瞬间重仓追击</div>
+              <div><b>卖点：</b>持有至高潮期加速或第二次分歧离场</div>
+              <div><b>止损：</b>次日不反包 / 跌破5日线，无条件割肉</div>
+            </div>
+            <div class="emo-exit-stocks" id="exitStocks1"><div class="emo-exit-empty">点击「开始分析」扫描匹配标的</div></div>
+          </div>
+          <!-- 买点二 -->
+          <div class="emo-exit-card">
+            <div class="emo-exit-head">
+              <span class="emo-exit-name">买点二：弱转强超预期打板</span>
+              <span class="emo-exit-tag violent">最暴力</span>
+              <span class="emo-exit-stage">主升/高潮前期</span>
+            </div>
+            <div class="emo-exit-rules">
+              <div><b>目标：</b>昨日分歧烂板/漏单的人气龙头</div>
+              <div><b>信号：</b>昨日弱（炸板/断板），今日竞价高开3%+（近似：涨幅>3%）+ 竞价量明显放大（量比≥2）</div>
+              <div><b>买点：</b>① 竞价挂单直接抢筹 ② 开盘5分钟内强势封板（扫板/排板）</div>
+              <div><b>卖点：</b>次日继续加速则锁仓，断板则清仓</div>
+              <div><b>止损：</b>炸板回落或次日低开低走，果断离场</div>
+            </div>
+            <div class="emo-exit-stocks" id="exitStocks2"><div class="emo-exit-empty">点击「开始分析」扫描匹配标的</div></div>
+          </div>
+          <!-- 买点三 -->
+          <div class="emo-exit-card">
+            <div class="emo-exit-head">
+              <span class="emo-exit-name">买点三：核按钮翘板</span>
+              <span class="emo-exit-tag hard">最难</span>
+              <span class="emo-exit-stage">退潮期尾声</span>
+            </div>
+            <div class="emo-exit-rules">
+              <div><b>目标：</b>被核按钮按死的人气龙头（近N日有涨停，非纯粹杂毛）</div>
+              <div><b>信号：</b>封死跌停封单巨大 + 所属题材未彻底退潮（板块有活口涨停）</div>
+              <div><b>买点：</b>跌停撬开的瞬间（跟随大资金翘板）</div>
+              <div><b>卖点：</b>次日冲高就跑（快进快出，绝不恋战）</div>
+              <div><b>止损：</b>撬板失败继续跌停，次日必须纠错割肉</div>
+            </div>
+            <div class="emo-exit-stocks" id="exitStocks3"><div class="emo-exit-empty">点击「开始分析」扫描匹配标的</div></div>
+          </div>
+        </div>
 
         <div class="emo-note">
-          <b>方法论说明：</b>情绪阶段判定基于连板高度、涨停/跌停家数、昨日涨停今日溢价（面率）综合打分；真龙需同时满足连板身位最高、率先打破压制、同板块高度联动；黄金买点为近N日涨停股今日出现分歧迹象（未涨停但放量/涨幅收窄）且板块内无跌停负反馈；低位补涨为主线板块内涨幅&lt;20%、均线多头排列、量比&gt;1.5的标的。所有信号为算法筛选，不构成投资建议。
+          <b>方法论说明：</b>情绪周期采用五维量化打分制（满分78分）：最高连板20分+涨停家数20分+炸板率15分+赚钱效应(昨日涨停今日溢价)15分+跌停/涨停比8分。得分0-15冰点/15-35启动/35-60主升/58+高潮；退潮期为动态判断（炸板率≥50%、溢价转负、高度断崖、晋级率&lt;15%、跌停≥15，满足2项以上且得分&lt;50即判退潮）。真龙需同时满足连板身位最高、率先打破压制、同板块高度联动；黄金买点为近N日涨停股今日出现分歧迹象且板块内无跌停负反馈；补涨龙挖掘自动锁定时机（龙头缩量加速/断板分歧黄金窗口），用三低一纯筛选，检测分离确认，给出买卖仓位建议；退学买点三模式自动识别首次大分歧低吸/弱转强打板/核按钮翘板。所有信号为算法筛选，不构成投资建议。
         </div>
       </div>
     </div>
@@ -1576,7 +1722,7 @@ function initTabs(){
 /* ============================================================
  * 起爆前夜（v5 新增）
  * 流程：近N日涨停基因 → 全市场实时过滤（涨幅-3~3% / 非ST / 市值≤上限）
- *       → 60日K线硬检查（均线粘合<2% & 量比1.3~5）→ 负面公告过滤
+ *       → 60日K线硬检查（均线粘合&lt;2% & 量比1.3~5）→ 负面公告过滤
  *       → 五项评分 + 板块联动加权 → 按总分降序输出
  * 数据源：push2delay clist（全市场，CORS）/ 腾讯 fqkline（60日K线，CORS）
  *         / 东财个股公告（负面过滤）/ push2ex 涨停池（基因）
@@ -1679,7 +1825,7 @@ async function boomLoadMarket(genes, mcapMax, conc, onProgress){
   return cands;
 }
 
-/* 阶段3：逐股拉 60日K线 → 硬检查（粘合<2% & 量比1.3~5） */
+/* 阶段3：逐股拉 60日K线 → 硬检查（粘合&lt;2% & 量比1.3~5） */
 async function boomLoadKlines(cands, conc, stickyMax, onProgress){
   const got = await pMapLimit(cands, conc, async c => {
     let kl = null, lastErr = null;
@@ -2131,12 +2277,131 @@ function renderSectorNews(){
  * 数据源：push2ex 涨停/跌停池 / push2delay clist 全市场 / 腾讯 fqkline K线
  * ============================================================ */
 const EMO_PHASES = {
-  ice:    { name: '冰点期', color: '#718096', pos: '0 ~ 10%', action: '空仓防守，仅在跌停数骤减+连板高度止跌的转折点，用极轻仓试错新题材破冰首板。管住手，不抄底。' },
-  start:  { name: '启动期', color: '#48bb78', pos: '20 ~ 30%', action: '轻仓出击最先封板的强先锋或一进二换手板，不抢冷门和无板块效应标的。旧主线退潮、新题材批量首板时确认。' },
-  main:   { name: '主升期', color: '#f56565', pos: '50 ~ 80%', action: '重仓围绕主线真龙头，做首次良性分歧低吸或弱转强确认。空间龙打出辨识度、梯队完整（龙+中位+补涨+中军放量）时敢于推仓。' },
-  climax: { name: '高潮期', color: '#ed8936', pos: '逐步降至 30% 以下', action: '只卖不买，分批减仓，去弱留强。板块批量涨停、中位秒板、缩量加速、垃圾股补涨时是盛极而衰预警，防范极致一致后炸板负反馈。' },
-  fade:   { name: '退潮期', color: '#1a202c', pos: '0%', action: '无条件清仓，停止一切低吸和打板尝试。高度标被核按钮闷杀、A字杀、中位成排跌停、亏钱效应扩散时，踏错节奏强行交易极易销户。' }
+  ice:    { name: '冰点期', color: '#718096', pos: '0 ~ 10%', action: '空仓观望。仅在跌停数骤减、连板高度止跌时，用极轻仓（≤10%）试错破冰首板。管住手，不抄底。' },
+  start:  { name: '启动期', color: '#48bb78', pos: '20 ~ 30%', action: '轻仓试错（20-30%）。聚焦最先封板的先锋，或做一进二的换手板。旧主线退潮、新题材批量首板时确认。' },
+  main:   { name: '主升期', color: '#f56565', pos: '50 ~ 80%', action: '敢于推仓位（50-80%）。围绕主线真龙头，做首次良性分歧低吸或弱转强确认。空间龙打出辨识度、梯队完整时重仓。' },
+  climax: { name: '高潮期', color: '#ed8936', pos: '逐步降至 0', action: '只卖不买，分批减仓。持仓者的盛宴，持币者的禁区。严格去弱留强，防范极致一致后的剧烈炸板负反馈。' },
+  fade:   { name: '退潮期', color: '#1a202c', pos: '0%', action: '无条件清仓，停止一切低吸和打板。高度标被核按钮闷杀、A字杀、中位成排跌停、亏钱效应扩散时，踏错节奏强行交易极易销户。' }
 };
+
+/* ---------- 情绪五维量化打分（总分78分 · 严格匹配定义） ---------- */
+function emoScorePhase(ctx){
+  var maxLb = ctx.maxLb || 0;
+  var ztCount = ctx.ztCount || 0;
+  var zbcRate = ctx.zbcRate;
+  var yestPremium = ctx.yestPremium;
+  var dtRatio = ctx.dtRatio;
+  var d = { maxLb: 0, ztCount: 0, zbcRate: 0, yestPremium: 0, dtRatio: 0 };
+  var score = 0;
+
+  /* 维度1：最高连板（20分）—— 5板饱和点，≥7板高潮区 */
+  var s1 = 0;
+  if (maxLb >= 7) s1 = 20;
+  else if (maxLb >= 5) s1 = 15;
+  else if (maxLb >= 4) s1 = 10;
+  else if (maxLb >= 3) s1 = 6;
+  else s1 = 2;
+  d.maxLb = s1; score += s1;
+
+  /* 维度2：涨停家数（20分）—— >80家强势，剔除ST/新股由数据源保证 */
+  var s2 = 0;
+  if (ztCount > 80) s2 = 20;
+  else if (ztCount >= 50) s2 = 14;
+  else if (ztCount >= 20) s2 = 8;
+  else s2 = 2;
+  d.ztCount = s2; score += s2;
+
+  /* 维度3：炸板率（15分）—— 越低越好，>40%高风险，>50%极差 */
+  var s3 = 0;
+  if (zbcRate != null){
+    if (zbcRate < 20) s3 = 15;
+    else if (zbcRate < 30) s3 = 12;
+    else if (zbcRate < 40) s3 = 8;
+    else if (zbcRate < 50) s3 = 4;
+    else s3 = 0;
+  } else {
+    s3 = 8; /* 数据缺失时给中性偏低分，避免虚高 */
+  }
+  d.zbcRate = s3; score += s3;
+
+  /* 维度4：赚钱效应（15分）—— 昨日涨停今日平均溢价，转负是退潮先行信号 */
+  var s4 = 0;
+  if (yestPremium != null){
+    if (yestPremium > 3) s4 = 15;
+    else if (yestPremium >= 1) s4 = 12;
+    else if (yestPremium >= 0) s4 = 8;
+    else if (yestPremium >= -2) s4 = 4;
+    else s4 = 0;
+  } else {
+    s4 = 6; /* 数据缺失时给中性分 */
+  }
+  d.yestPremium = s4; score += s4;
+
+  /* 维度5：跌停/涨停比（8分）—— 跌停骤增是冰点/退潮标志 */
+  var s5 = 0;
+  if (dtRatio != null){
+    if (dtRatio === 0) s5 = 8;
+    else if (dtRatio < 0.1) s5 = 6;
+    else if (dtRatio < 0.3) s5 = 4;
+    else if (dtRatio < 0.5) s5 = 2;
+    else s5 = 0;
+  } else {
+    s5 = 4;
+  }
+  d.dtRatio = s5; score += s5;
+
+  return { score: score, details: d };
+}
+
+/* ---------- 情绪阶段判定（五维量化打分制 · 严格匹配定义） ---------- */
+function emoDetectPhase(ctx){
+  const r = emoScorePhase(ctx);
+  const score = r.score;
+  const maxLb = ctx.maxLb || 0;
+  const ztCount = ctx.ztCount || 0;
+  const dtCount = ctx.dtCount || 0;
+  const zbcRate = ctx.zbcRate;
+  const yestPremium = ctx.yestPremium;
+  const promotionRate = ctx.promotionRate;
+
+  /* ===== 退潮期优先判断：多项指标同时恶化（得分骤降） ===== */
+  /* 满足以下至少3项 = 退潮期 */
+  let fadeSignals = 0;
+  const fadeDetails = [];
+  if (maxLb <= 3){ fadeSignals++; fadeDetails.push('连板压缩至≤3板'); }
+  if (zbcRate != null && zbcRate >= 50){ fadeSignals++; fadeDetails.push('炸板率≥50%'); }
+  if (yestPremium != null && yestPremium < 0){ fadeSignals++; fadeDetails.push('赚钱效应转负'); }
+  if (dtCount >= 10){ fadeSignals++; fadeDetails.push('跌停≥10家'); }
+  if (promotionRate != null && promotionRate < 20){ fadeSignals++; fadeDetails.push('晋级率&lt;20%'); }
+
+  /* 强烈退潮信号：赚钱效应<-2% 且 炸板率≥40% */
+  const strongFade = (yestPremium != null && yestPremium < -2) && (zbcRate != null && zbcRate >= 40);
+
+  if (strongFade || fadeSignals >= 3){
+    return { phase: 'fade', score: score, details: r.details, fadeDetails: strongFade ? ['赚钱效应<-2%+炸板率≥40%（强烈信号）'] : fadeDetails };
+  }
+
+  /* ===== 按分数区间判定 ===== */
+  /* 高潮期：≥60分 */
+  if (score >= 60) return { phase: 'climax', score: score, details: r.details };
+
+  /* 主升期：35-60分 + 硬条件（最高连板≥5板 或 晋级率≥30%） */
+  if (score >= 35){
+    const hasSpaceDragon = maxLb >= 5;
+    const healthyPromotion = promotionRate != null && promotionRate >= 30;
+    if (hasSpaceDragon || healthyPromotion){
+      return { phase: 'main', score: score, details: r.details };
+    }
+    /* 分数够但无空间龙/晋级率不足 → 降为启动期（避免误判） */
+    return { phase: 'start', score: score, details: r.details, downgraded: true, downgradeReason: '分数达主升区间但最高连板仅' + maxLb + '板、晋级率' + (promotionRate != null ? promotionRate.toFixed(0) + '%' : '未知') + '，无真正空间龙，降为启动期' };
+  }
+
+  /* 启动期：15-35分 */
+  if (score >= 15) return { phase: 'start', score: score, details: r.details };
+
+  /* 冰点期：<15分 */
+  return { phase: 'ice', score: score, details: r.details };
+}
 
 /* ---------- 跌停池 ---------- */
 async function loadDTPool(dateStr){
@@ -2177,26 +2442,6 @@ async function emoLoadMarket(conc, onProgress){
     });
   });
   return map;
-}
-
-/* ---------- 情绪阶段判定 ---------- */
-function emoDetectPhase(ctx){
-  const { maxLb, ztCount, dtCount, lb3Count, yestPremium, yestTopAlive } = ctx;
-  /* 优先级：退潮 > 冰点 > 高潮 > 主升 > 启动 */
-  /* 退潮：跌停多 + (昨日最高板今日断板 或 高度极低) */
-  if (dtCount >= 10 && (!yestTopAlive || maxLb <= 2)) return 'fade';
-  /* 冰点：高度压制2~3板 + 跌停10~20家 */
-  if (maxLb <= 3 && dtCount >= 10) return 'ice';
-  /* 高潮：批量涨停(≥80) + 中位秒板(连板≥3家数≥10) */
-  if (ztCount >= 80 && lb3Count >= 10) return 'climax';
-  /* 主升：空间龙≥4~5板突破压制 + 涨停≥40 */
-  if (maxLb >= 4 && ztCount >= 40) return 'main';
-  /* 启动：首板潮(涨停≥30) + 跌停减少(<10) + 高度≤3 */
-  if (ztCount >= 30 && dtCount < 10 && maxLb <= 3) return 'start';
-  /* 边界情况：高度≥4但涨停不足40，偏启动/主升过渡 */
-  if (maxLb >= 4) return 'main';
-  /* 默认：启动 */
-  return 'start';
 }
 
 /* ---------- 主线梯队构建 ---------- */
@@ -2289,26 +2534,67 @@ function emoScanGolden(genes, ztPool, dtPool, marketMap){
   return out;
 }
 
-/* ---------- 低位补涨扫描 ---------- */
-async function emoScanLow(ladder, genes, marketMap, conc, onProgress){
-  if (!ladder.length) return [];
-  /* 主线板块：取涨停最多的板块 */
+/* ---------- 补涨龙挖掘（时机锁定 + 三低一纯 + 分离确认） ---------- */
+async function emoScanLow(ladder, genes, marketMap, conc, onProgress, ztPool){
+  if (!ladder.length) return { timing: { node: 0, desc: '无主线板块数据' }, stocks: [] };
+
   const mainSector = ladder[0];
   const mainSectorName = mainSector.name;
-  /* 候选：该板块相关股票（从基因库+全市场中找名称含板块关键词的） */
+  const dragon = mainSector.dragon; // 空间龙
+  const dragonCode = dragon ? dragon.code : null;
+  const dragonMkt = dragonCode ? marketMap.get(dragonCode) : null;
+  const dragonTodayZt = dragonCode ? ztPool.some(s => s.code === dragonCode) : false;
+  const dragonZdp = dragonMkt && dragonMkt.zdp != null ? dragonMkt.zdp : null;
+
+  /* ===== 第一步：时机锁定 ===== */
+  let timingNode = 0;
+  let timingDesc = '';
+  /* 节点二：龙头断板分歧（黄金窗口）—— 优先级最高 */
+  if (dragon && !dragonTodayZt && dragonZdp != null && dragonZdp > -9.5){
+    timingNode = 2;
+    timingDesc = '龙头 <b>' + esc(dragon.name) + '</b> 今日断板分歧（' + fmtPct(dragonZdp) + '，未跌停），<b>黄金窗口开启</b>——重点关注板块内逆势拉起的首板/二板';
+  }
+  /* 节点一：龙头缩量加速 */
+  else if (dragon && dragonTodayZt && dragon.hs != null && dragon.hs < 3){
+    timingNode = 1;
+    timingDesc = '龙头 <b>' + esc(dragon.name) + '</b> 缩量加速（换手 ' + dragon.hs.toFixed(1) + '%，买不进），踏空资金寻找宣泄口——关注板块内第一个换手二板';
+  }
+  /* 非最佳时机 */
+  else {
+    timingNode = 0;
+    timingDesc = dragon
+      ? '龙头 <b>' + esc(dragon.name) + '</b> 当前状态（涨停=' + dragonTodayZt + '，涨跌=' + (dragonZdp != null ? fmtPct(dragonZdp) : '—') + '）既非缩量加速也非断板分歧，<b>非补涨龙最佳时机</b>，以下为潜在候选'
+      : '主线板块无明确空间龙，时机不明确，以下为潜在候选';
+  }
+
+  /* ===== 第二步：候选股收集 ===== */
+  /* 两类候选：A. 今日涨停的同板块首板/二板（已启动补涨龙） B. 未涨停但放量的同板块低位股（潜在） */
   const candidates = [];
-  const todayCodes = new Set();
-  mainSector.stocks.forEach(s => todayCodes.add(s.code));
-  /* 从基因库中找同板块但今日未涨停、涨幅<20%的 */
+  const todayZtMap = {};
+  ztPool.forEach(s => { todayZtMap[s.code] = s; });
+
+  /* A类：今日涨停的同板块股（lbc<=2，排除龙头本身） */
+  ztPool.forEach(s => {
+    if (s.hybk !== mainSectorName) return;
+    if (dragonCode && s.code === dragonCode) return;
+    if ((s.lbc || 1) > 2) return; // 只看首板和二板
+    const m = marketMap.get(s.code);
+    if (!m || /ST/i.test(s.name)) return;
+    candidates.push({ code: s.code, gene: null, market: m, ztInfo: s, started: true });
+  });
+
+  /* B类：未涨停但有涨停基因的同板块股（潜在补涨龙） */
   genes.forEach((g, code) => {
-    if (g.hybk !== mainSectorName) return;
-    if (todayCodes.has(code)) return;
+    if (g.hybk !== mainSectorName) return; // 纯血统
+    if (todayZtMap[code]) return; // 已在A类
+    if (dragonCode && code === dragonCode) return;
     const m = marketMap.get(code);
     if (!m || /ST/i.test(m.name)) return;
-    if (m.volRatio < 1.5) return;
-    candidates.push({ code, gene: g, market: m });
+    if (m.volRatio < 1.5) return; // 放量
+    candidates.push({ code, gene: g, market: m, ztInfo: null, started: false });
   });
-  /* 逐股拉K线判断多头排列和本轮涨幅 */
+
+  /* ===== 第三步：逐股拉K线 + 三低一纯筛选 ===== */
   const got = await pMapLimit(candidates, conc, async c => {
     try {
       const url = `${API.kline}?param=${boomSecid(c.code)},day,,,60,qfq`;
@@ -2317,46 +2603,214 @@ async function emoScanLow(ladder, genes, marketMap, conc, onProgress){
       const kl = d.qfqday || d.day || [];
       if (kl.length < 30) return null;
       const st = boomKlineStats(kl);
-      /* 多头排列：MA5>MA10>MA20 */
-      if (!(st.ma5 > st.ma10 && st.ma10 > st.ma20)) return null;
-      /* 本轮涨幅：近20日涨幅 <20% */
+
+      /* 均线多头排列：MA5>MA10>MA20 */
+      const maBull = st.ma5 > st.ma10 && st.ma10 > st.ma20;
+      if (!maBull) return null;
+
+      /* 低位：近60日涨幅 <30% */
       const closes = kl.map(k => +k[2]);
-      const oldPx = closes[Math.max(0, closes.length - 20)] || closes[0];
-      const roundGain = oldPx > 0 ? (st.cur / oldPx - 1) * 100 : 0;
-      if (roundGain >= 20) return null;
-      return { ...c, kline: st, roundGain };
+      const oldPx = closes[0];
+      const gain60 = oldPx > 0 ? (st.cur / oldPx - 1) * 100 : 0;
+
+      /* 近20日涨幅 */
+      const oldPx20 = closes[Math.max(0, closes.length - 20)] || closes[0];
+      const roundGain = oldPx20 > 0 ? (st.cur / oldPx20 - 1) * 100 : 0;
+
+      return { ...c, kline: st, roundGain, gain60, maBull: true };
     } catch (e){ return null; }
   }, onProgress);
-  const out = got.filter(Boolean).map(c => ({
-    code: c.code, name: c.market.name, price: c.market.price,
-    zdp: c.market.zdp, ltsz: c.market.ltsz, volRatio: c.market.volRatio,
-    roundGain: c.roundGain, ma5: c.kline.ma5, ma10: c.kline.ma10, ma20: c.kline.ma20,
-    hybk: c.gene.hybk, reason: '主线板块低位+多头排列+放量'
-  }));
-  out.sort((a, b) => b.volRatio - a.volRatio);
-  return out;
+
+  /* ===== 第四步：三低一纯打分 + 分离确认 + 买卖建议 ===== */
+  const stocks = got.filter(Boolean).map(c => {
+    const price = c.market.price;
+    const ltsz = c.market.ltsz;
+    const name = c.started ? c.ztInfo.name : c.market.name;
+    const hybk = c.started ? c.ztInfo.hybk : (c.gene ? c.gene.hybk : mainSectorName);
+
+    /* 三低一纯检查 */
+    const checks = {
+      lowPrice: price < 10,
+      lowCap: ltsz >= 30e8 && ltsz <= 80e8,
+      lowPos: c.gain60 < 30,
+      pureBlood: hybk === mainSectorName,
+      maBull: c.maBull
+    };
+    /* 分离确认：龙头今日下跌，目标股今日涨停/上涨 */
+    const separation = dragonZdp != null && dragonZdp < 0 && c.market.zdp > 0;
+    checks.separation = separation;
+
+    const passCount = Object.values(checks).filter(Boolean).length;
+
+    /* 买卖动作（快准狠） */
+    let position = '2-3成试错（打板介入，排板/扫板）';
+    let addCond = '次日竞价封单 > 今日封单 → 加仓至5成（确认补涨龙身份）';
+    let sellRule = '断板即走，不参与首阴；补涨龙无反包待遇，一旦断板就是A顶，清仓';
+    if (separation){
+      position = '3成试错（★分离确认，确定性更高，可适当加大）';
+    }
+    if (!c.started){
+      position = '观察等待（尚未启动，出现首板时再打板介入）';
+      addCond = '首板当日打板介入2-3成，次日竞价封单放大则加仓';
+    }
+
+    /* 信号强度评分：分离确认+分离20分，每通过一项+10分，已启动+15分 */
+    const score = (separation ? 20 : 0) + passCount * 10 + (c.started ? 15 : 0);
+
+    return {
+      code: c.code, name, price, zdp: c.market.zdp, ltsz, volRatio: c.market.volRatio,
+      roundGain: c.roundGain, gain60: c.gain60,
+      ma5: c.kline.ma5, ma10: c.kline.ma10, ma20: c.kline.ma20,
+      hybk, checks, passCount, separation, started: c.started,
+      lbc: c.started ? (c.ztInfo.lbc || 1) : 0,
+      position, addCond, sellRule, score,
+      reason: (separation ? '★分离确认 ' : '') + (c.started ? '已启动' + (c.ztInfo.lbc || 1) + '板 ' : '潜在 ') +
+              '三低一纯通过' + passCount + '/6项 + 均线多头 + 量比' + c.market.volRatio.toFixed(1)
+    };
+  });
+
+  /* 排序：分离确认优先 → 评分降序 → 量比降序 */
+  stocks.sort((a, b) => {
+    if (a.separation !== b.separation) return b.separation - a.separation;
+    if (b.score !== a.score) return b.score - a.score;
+    return b.volRatio - a.volRatio;
+  });
+
+  return { timing: { node: timingNode, desc: timingDesc }, stocks: stocks.slice(0, 12) };
 }
 
-/* ---------- 渲染 ---------- */
-function emoRenderPhase(phase, ctx){
+/* ---------- 补涨龙渲染（卡片式） ---------- */
+function emoRenderLow(result){
+  const cards = $('#lowCards');
+  const empty = $('#emoLowEmpty');
+  const timingResult = $('#lowTimingResult');
+
+  /* 时机指示器 */
+  const node1 = $('#timingNode1');
+  const node2 = $('#timingNode2');
+  const status1 = $('#timing1Status');
+  const status2 = $('#timing2Status');
+  node1.classList.remove('active', 'inactive');
+  node2.classList.remove('active', 'inactive');
+
+  if (result.timing.node === 1){
+    node1.classList.add('active'); node2.classList.add('inactive');
+    status1.textContent = '✓ 当前处于此节点';
+    status2.textContent = '未触发';
+  } else if (result.timing.node === 2){
+    node2.classList.add('active'); node1.classList.add('inactive');
+    status2.textContent = '✓ 当前处于此节点（黄金窗口）';
+    status1.textContent = '未触发';
+  } else {
+    node1.classList.add('inactive'); node2.classList.add('inactive');
+    status1.textContent = '未触发';
+    status2.textContent = '未触发';
+  }
+
+  /* 时机描述 */
+  timingResult.style.display = 'block';
+  timingResult.innerHTML = result.timing.desc;
+
+  /* 候选股 */
+  if (!result.stocks.length){ cards.innerHTML = ''; empty.style.display = 'block'; return; }
+  empty.style.display = 'none';
+  cards.innerHTML = '';
+
+  result.stocks.forEach(s => {
+    const checkHtml = [
+      { key: 'lowPrice', label: '低股价', pass: s.checks.lowPrice },
+      { key: 'lowCap', label: '低市值', pass: s.checks.lowCap },
+      { key: 'lowPos', label: '低位', pass: s.checks.lowPos },
+      { key: 'pureBlood', label: '纯血统', pass: s.checks.pureBlood, cls: 'pure' },
+      { key: 'maBull', label: '均线多头', pass: s.checks.maBull, cls: 'ma' },
+      { key: 'separation', label: '分离确认', pass: s.checks.separation, cls: 'highlight' }
+    ].map(c =>
+      '<span class="lc-check ' + (c.pass ? 'pass' : 'fail') + (c.cls && c.pass ? ' ' + c.cls : '') + '">' +
+        (c.pass ? '✓' : '✗') + ' ' + c.label +
+      '</span>'
+    ).join('');
+
+    const zdpCls = clsOf(s.zdp);
+    const cardCls = 'low-card' + (s.separation ? ' separation' : '');
+    const statusHtml = s.started
+      ? '<span class="lc-status started">已启动 ' + s.lbc + '板</span>'
+      : '<span class="lc-status potential">潜在候选</span>';
+
+    cards.insertAdjacentHTML('beforeend',
+      '<div class="' + cardCls + '" data-code="' + s.code + '">' +
+        '<div class="lc-head">' +
+          '<span class="lc-name">' + esc(s.name) + '</span>' +
+          '<span class="lc-code">' + s.code + '</span>' +
+          statusHtml +
+        '</div>' +
+        '<div class="lc-kpis">' +
+          '<span class="lc-kpi">现价 <b>' + s.price.toFixed(2) + '</b></span>' +
+          '<span class="lc-kpi">涨跌 <b class="' + zdpCls + '">' + fmtPct(s.zdp) + '</b></span>' +
+          '<span class="lc-kpi">市值 <b>' + fmtY(s.ltsz) + '</b></span>' +
+          '<span class="lc-kpi">量比 <b>' + s.volRatio.toFixed(2) + '</b></span>' +
+          '<span class="lc-kpi">60日涨幅 <b class="' + clsOf(s.gain60) + '">' + fmtPct(s.gain60) + '</b></span>' +
+          '<span class="lc-kpi">评分 <b style="color:var(--gold)">' + s.score + '</b></span>' +
+        '</div>' +
+        '<div class="lc-checks">' + checkHtml + '</div>' +
+        '<div class="lc-trade">' +
+          '<div class="row"><span class="label buy">买点</span><span class="val">' + esc(s.position) + '</span></div>' +
+          '<div class="row"><span class="label add">加仓</span><span class="val">' + esc(s.addCond) + '</span></div>' +
+          '<div class="row"><span class="label sell">卖点</span><span class="val">' + esc(s.sellRule) + '</span></div>' +
+        '</div>' +
+      '</div>');
+  });
+
+  /* 点击打开明细 */
+  cards.querySelectorAll('.low-card').forEach(el => {
+    el.addEventListener('click', () => {
+      const code = el.dataset.code;
+      const s = state.ztPool.find(x => x.code === code);
+      if (s) openDetail(code, state.ztPool);
+    });
+  });
+}
+function emoRenderPhase(phase, ctx, emoScore, scoreDetails, phaseResult){
   $$('#emoPhaseBar .seg').forEach(s => s.classList.toggle('active', s.dataset.phase === phase));
   const p = EMO_PHASES[phase];
   $('#emoPosPhase').innerHTML = '<span style="color:' + p.color + '">' + p.name + '</span>';
   $('#emoPosRange').textContent = p.pos;
   $('#emoPosRange').style.color = p.color;
   $('#emoPosAction').textContent = p.action;
-  /* KPI */
+
+  /* 情绪总分显示 */
+  let scoreHtml = '';
+  if (emoScore != null){
+    scoreHtml = '<div style="margin-bottom:8px;font-size:12px;color:var(--muted)">情绪综合得分：<b style="color:var(--gold);font-size:16px">' + emoScore + '</b> / 78（连板' + (scoreDetails?scoreDetails.maxLb:0) + '+涨停' + (scoreDetails?scoreDetails.ztCount:0) + '+炸板率' + (scoreDetails?scoreDetails.zbcRate:0) + '+溢价' + (scoreDetails?scoreDetails.yestPremium:0) + '+跌涨比' + (scoreDetails?scoreDetails.dtRatio:0) + '）</div>';
+  }
+
+  /* 退潮信号 / 降级说明 */
+  let alertHtml = '';
+  if (phaseResult && phaseResult.fadeDetails && phaseResult.fadeDetails.length){
+    alertHtml = '<div style="margin:8px 0;padding:8px 12px;background:rgba(246,70,93,0.08);border:1px solid rgba(246,70,93,0.3);border-radius:8px;font-size:11.5px;color:var(--muted);line-height:1.7">' +
+      '<b style="color:var(--red)">⚠ 退潮信号（' + phaseResult.fadeDetails.length + '项）：</b>' + phaseResult.fadeDetails.join('、') +
+      '</div>';
+  }
+  if (phaseResult && phaseResult.downgraded){
+    alertHtml += '<div style="margin:8px 0;padding:8px 12px;background:rgba(240,166,60,0.08);border:1px solid rgba(240,166,60,0.3);border-radius:8px;font-size:11.5px;color:var(--muted);line-height:1.7">' +
+      '<b style="color:var(--gold)">⚡ 阶段降级：</b>' + phaseResult.downgradeReason +
+      '</div>';
+  }
+
+  /* KPI 指标卡 */
   const kpis = [
-    { k: '当前连板最高', v: ctx.maxLb ? ctx.maxLb + '板' : '—', cls: ctx.maxLb >= 4 ? 'up' : '' },
-    { k: '今日涨停家数', v: ctx.ztCount, cls: 'up' },
-    { k: '今日跌停家数', v: ctx.dtCount, cls: ctx.dtCount >= 10 ? 'down' : '' },
-    { k: '连板≥3家数', v: ctx.lb3Count, cls: '' },
-    { k: '昨日涨停今日溢价', v: ctx.yestPremium != null ? fmtPct(ctx.yestPremium) : '—', cls: ctx.yestPremium > 0 ? 'up' : 'down' },
-    { k: '昨日最高板今日', v: ctx.yestTopAlive != null ? (ctx.yestTopAlive ? '存活' : '断板') : '—', cls: ctx.yestTopAlive ? 'up' : 'down' }
+    { k: '最高连板', v: ctx.maxLb ? ctx.maxLb + '板' : '—', cls: ctx.maxLb >= 5 ? 'up' : (ctx.maxLb <= 3 ? 'down' : '') },
+    { k: '涨停家数', v: ctx.ztCount, cls: ctx.ztCount >= 80 ? 'up' : (ctx.ztCount < 20 ? 'down' : '') },
+    { k: '跌停家数', v: ctx.dtCount, cls: ctx.dtCount >= 10 ? 'down' : '' },
+    { k: '炸板率', v: ctx.zbcRate != null ? ctx.zbcRate.toFixed(1) + '%' : '—', cls: ctx.zbcRate >= 40 ? 'down' : (ctx.zbcRate <= 25 ? 'up' : '') },
+    { k: '连板晋级率', v: ctx.promotionRate != null ? ctx.promotionRate.toFixed(0) + '%' : '—', cls: ctx.promotionRate != null && ctx.promotionRate >= 30 ? 'up' : (ctx.promotionRate != null && ctx.promotionRate < 15 ? 'down' : '') },
+    { k: '昨日涨停溢价', v: ctx.yestPremium != null ? fmtPct(ctx.yestPremium) : '—', cls: ctx.yestPremium > 0 ? 'up' : 'down' },
+    { k: '跌/涨停比', v: ctx.dtRatio != null && ctx.dtRatio < 100 ? (ctx.dtRatio * 100).toFixed(0) + '%' : '—', cls: ctx.dtRatio > 0.2 ? 'down' : 'up' },
+    { k: '连板≥3家数', v: ctx.lb3Count, cls: '' }
   ];
-  $('#emoKpis').innerHTML = kpis.map(k =>
-    '<div class="emo-kpi"><div class="k">' + k.k + '</div><div class="v ' + k.cls + '">' + k.v + '</div></div>'
-  ).join('');
+  $('#emoKpis').innerHTML = scoreHtml + alertHtml + '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:8px;margin-top:8px">' +
+    kpis.map(k =>
+      '<div class="emo-kpi" style="margin:0"><div class="k">' + k.k + '</div><div class="v ' + k.cls + '">' + k.v + '</div></div>'
+    ).join('') + '</div>';
 }
 
 function emoRenderLadder(ladder){
@@ -2455,27 +2909,132 @@ function emoRenderGolden(list){
   });
 }
 
-function emoRenderLow(list){
-  const body = $('#emoLowBody');
-  const empty = $('#emoLowEmpty');
-  if (!list.length){ body.innerHTML = ''; empty.style.display = 'block'; return; }
-  empty.style.display = 'none';
-  body.innerHTML = '';
-  list.forEach(s => {
-    body.insertAdjacentHTML('beforeend',
-      '<tr>' +
-        '<td class="l">' + s.code + '</td>' +
-        '<td class="name">' + esc(s.name) + '</td>' +
-        '<td>' + s.price.toFixed(2) + '</td>' +
-        '<td class="' + clsOf(s.zdp) + '">' + fmtPct(s.zdp) + '</td>' +
-        '<td>' + fmtY(s.ltsz) + '</td>' +
-        '<td class="' + clsOf(s.roundGain) + '">' + fmtPct(s.roundGain) + '</td>' +
-        '<td>' + s.volRatio.toFixed(2) + '</td>' +
-        '<td style="font-size:11px">MA5 ' + s.ma5.toFixed(2) + '<br>MA10 ' + s.ma10.toFixed(2) + '<br>MA20 ' + s.ma20.toFixed(2) + '</td>' +
-        '<td class="l">' + esc(s.hybk) + '</td>' +
-        '<td class="l" style="font-size:11px;color:var(--muted)">' + s.reason + '</td>' +
-      '</tr>');
+/* ---------- 退学买点（三模式自动识别） ---------- */
+function emoScanExitBuys(genes, ztPool, dtPool, marketMap, near3){
+  const todayCodes = new Set(ztPool.map(s => s.code));
+  const dtSectors = new Set(dtPool.map(s => s.hybk));
+  const ztSectors = new Set(ztPool.map(s => s.hybk));
+  /* 昨日涨停池（用于买点二判断昨日分歧） */
+  const yestPool = near3.length >= 2 ? near3[1] : [];
+  const yestZbcMap = {};
+  yestPool.forEach(s => { yestZbcMap[s.code] = s.zbc || 0; });
+
+  const buy1 = [], buy2 = [], buy3 = [];
+
+  genes.forEach((g, code) => {
+    const m = marketMap.get(code);
+    if (!m) return;
+    if (/ST/i.test(m.name)) return;
+
+    /* ===== 买点一：首次大分歧低吸（最核心） ===== */
+    /* 近N日有过≥4板（总空间龙），今日未涨停 */
+    if (g.maxLb >= 4 && !todayCodes.has(code)){
+      /* 今日放量分歧：量比≥1.5，涨幅 -7%~5%（爆量烂板/首阴/漏单近似） */
+      if (m.volRatio >= 1.5 && m.zdp != null && m.zdp >= -7 && m.zdp <= 5){
+        /* 板块内无跌停负反馈 */
+        if (!dtSectors.has(g.hybk)){
+          buy1.push({
+            code, name: m.name, price: m.price, zdp: m.zdp,
+            metric: { label: '量比', value: m.volRatio },
+            ltsz: m.ltsz, hybk: g.hybk, maxLb: g.maxLb, ztCount: g.ztCount, lastDate: g.lastDate,
+            signal: m.zdp < 0 ? '爆量首阴' : (m.volRatio >= 2 ? '爆量烂板/尾盘漏单' : '温和放量分歧'),
+            buyPoint: '① 分歧日尾盘分时企稳拿底仓 ② 次日带量上攻翻红瞬间重仓追击',
+            sellPoint: '持有至高潮期加速或第二次分歧离场',
+            stopLoss: '次日不反包 / 跌破5日线，无条件割肉'
+          });
+        }
+      }
+    }
+
+    /* ===== 买点二：弱转强超预期打板（最暴力） ===== */
+    /* 昨日有分歧：昨日涨停但炸板≥1，或昨日断板（近3日有涨停但今日非连续） */
+    const yestZbc = yestZbcMap[code] || 0;
+    const hadYestDivergence = yestZbc >= 1 || (!todayCodes.has(code) && g.lastIdx != null && g.lastIdx <= 2);
+    if (hadYestDivergence && g.maxLb >= 2){
+      /* 今日超预期：涨幅>3%（近似竞价高开3%+）+ 量比≥2（竞价抢筹放量） */
+      if (m.zdp != null && m.zdp > 3 && m.volRatio >= 2){
+        buy2.push({
+          code, name: m.name, price: m.price, zdp: m.zdp,
+          metric: { label: '量比', value: m.volRatio },
+          ltsz: m.ltsz, hybk: g.hybk, maxLb: g.maxLb, yestZbc,
+          signal: yestZbc >= 1 ? '昨日炸板' + yestZbc + '次 → 今日高开抢筹' : '昨日断板 → 今日弱转强超预期',
+          buyPoint: '① 竞价挂单直接抢筹 ② 开盘5分钟内强势封板（扫板/排板）',
+          sellPoint: '次日继续加速则锁仓，断板则清仓',
+          stopLoss: '炸板回落或次日低开低走，果断离场'
+        });
+      }
+    }
+
+    /* ===== 买点三：核按钮翘板（最难） ===== */
+    /* 今日跌停，近N日有过≥2板（人气龙头非杂毛） */
+    const dt = dtPool.find(d => d.code === code);
+    if (dt && g.maxLb >= 2){
+      /* 封单巨大：封单资金/流通市值 > 0.5% */
+      const sealRatio = dt.ltsz > 0 ? (dt.fund || 0) / dt.ltsz * 100 : 0;
+      if (sealRatio >= 0.5){
+        /* 所属题材未彻底退潮：板块内有活口涨停 */
+        if (ztSectors.has(g.hybk)){
+          buy3.push({
+            code, name: dt.name, price: dt.price, zdp: dt.zdp,
+            metric: { label: '封单比', value: sealRatio },
+            ltsz: dt.ltsz, hybk: g.hybk, maxLb: g.maxLb, ztCount: g.ztCount,
+            signal: '核按钮封死跌停（封单' + sealRatio.toFixed(1) + '%流通值）+ ' + g.hybk + '板块有活口',
+            buyPoint: '跌停撬开的瞬间，跟随大资金翘板',
+            sellPoint: '次日冲高就跑（快进快出，绝不恋战）',
+            stopLoss: '撬板失败继续跌停，次日必须纠错割肉'
+          });
+        }
+      }
+    }
   });
+
+  buy1.sort((a, b) => b.metric.value - a.metric.value);
+  buy2.sort((a, b) => b.metric.value - a.metric.value);
+  buy3.sort((a, b) => b.metric.value - a.metric.value);
+
+  return { buy1: buy1.slice(0, 6), buy2: buy2.slice(0, 6), buy3: buy3.slice(0, 6) };
+}
+
+function emoRenderExitBuys(result){
+  const renderOne = (list, containerId) => {
+    const box = $('#' + containerId);
+    if (!list.length){
+      box.innerHTML = '<div class="emo-exit-empty">当前无匹配标的（条件严格，主升/退潮期重点关注）</div>';
+      return;
+    }
+    box.innerHTML = '';
+    list.forEach(s => {
+      const zdpCls = clsOf(s.zdp);
+      const mv = s.metric.value.toFixed(s.metric.label === '封单比' ? 1 : 2);
+      box.insertAdjacentHTML('beforeend',
+        '<div class="emo-exit-stock" data-code="' + s.code + '">' +
+          '<div class="nm">' + esc(s.name) +
+            '<span class="cd">' + s.code + '</span>' +
+            '<span style="font-size:9px;color:var(--gold);margin-left:auto;font-weight:700">历史最高' + s.maxLb + '板</span>' +
+          '</div>' +
+          '<div class="ms">' +
+            '<span>现价 <b>' + s.price.toFixed(2) + '</b></span>' +
+            '<span class="' + zdpCls + '">涨跌 <b>' + fmtPct(s.zdp) + '</b></span>' +
+            '<span>' + s.metric.label + ' <b>' + mv + (s.metric.label === '封单比' ? '%' : '') + '</b></span>' +
+            '<span>市值 <b>' + fmtY(s.ltsz) + '</b></span>' +
+          '</div>' +
+          '<div class="ms" style="color:var(--amber)"><b>信号：</b>' + esc(s.signal) + '</div>' +
+          '<div class="ms"><span style="color:var(--red)"><b>预期买点：</b>' + esc(s.buyPoint) + '</span></div>' +
+          '<div class="ms"><span style="color:var(--green)"><b>预期卖点：</b>' + esc(s.sellPoint) + '</span></div>' +
+          '<div class="ms"><span style="color:var(--dim)"><b>止损纪律：</b>' + esc(s.stopLoss) + '</span></div>' +
+        '</div>');
+    });
+    box.querySelectorAll('.emo-exit-stock').forEach(el => {
+      el.addEventListener('click', () => {
+        const code = el.dataset.code;
+        const s = state.ztPool.find(x => x.code === code);
+        if (s) openDetail(code, state.ztPool);
+      });
+    });
+  };
+  renderOne(result.buy1, 'exitStocks1');
+  renderOne(result.buy2, 'exitStocks2');
+  renderOne(result.buy3, 'exitStocks3');
 }
 
 /* ---------- 主流程 ---------- */
@@ -2510,31 +3069,57 @@ async function runEmotion(){
     setBar(35);
     const marketMap = await emoLoadMarket(conc, (d, n) => { setSt('全市场行情 ' + d + '/' + n + ' 页'); setBar(35 + d / n * 25); });
 
-    /* 阶段4：计算情绪指标 */
-    setSt('正在计算情绪周期指标…');
+    /* 阶段4：计算情绪指标（五维量化 · 全部实际计算） */
+    setSt('正在计算情绪周期五维量化指标…');
     setBar(65);
     const ztPool = state.ztPool;
     const maxLb = ztPool.reduce((m, s) => Math.max(m, s.lbc || 0), 0);
     const lb3Count = ztPool.filter(s => s.lbc >= 3).length;
-    /* 昨日涨停今日溢价：昨日涨停股今日涨跌幅均值 */
+
+    /* ① 炸板率：全市场涨幅≥9.5%（曾触涨停）- 最终涨停数 */
+    let touchedZt = 0;
+    marketMap.forEach(m => { if (m.zdp != null && m.zdp >= 9.5) touchedZt++; });
+    const zbcCount = Math.max(0, touchedZt - ztPool.length);
+    const zbcRate = touchedZt > 0 ? zbcCount / touchedZt * 100 : null;
+
+    /* ② 跌停/涨停比 */
+    const dtRatio = ztPool.length > 0 ? dtPool.length / ztPool.length : null;
+
+    /* ③ 赚钱效应：昨日涨停股今日平均涨跌幅 */
     let yestPremium = null, yestTopAlive = null;
-    if (state.near3.length >= 2){
-      const yestPool = state.near3[1];
-      const yestTop = yestPool.reduce((m, s) => (!m || s.lbc > m.lbc ? s : m), null);
-      if (yestTop){
-        const tm = marketMap.get(yestTop.code);
-        yestTopAlive = tm ? tm.zdp >= 9.5 : false;
-      }
+    const near3 = state.near3 || [];
+    if (near3.length >= 2 && near3[1] && near3[1].length){
+      const yestPool = near3[1];
       const premiums = [];
       yestPool.forEach(s => {
         const m = marketMap.get(s.code);
         if (m && m.zdp != null) premiums.push(m.zdp);
       });
       if (premiums.length) yestPremium = premiums.reduce((a, b) => a + b, 0) / premiums.length;
+      /* 昨日最高板今日是否存活 */
+      const yestTop = yestPool.reduce((a, b) => (a.lbc || 0) > (b.lbc || 0) ? a : b, yestPool[0]);
+      if (yestTop){
+        const tm = marketMap.get(yestTop.code);
+        yestTopAlive = tm ? tm.zdp >= 9.5 : false;
+      }
     }
 
-    const ctx = { maxLb, ztCount: ztPool.length, dtCount: dtPool.length, lb3Count, yestPremium, yestTopAlive };
-    const phase = emoDetectPhase(ctx);
+    /* ④ 连板晋级率：今日≥2板数 / 昨日涨停数 */
+    let promotionRate = null;
+    if (near3.length >= 2 && near3[1] && near3[1].length > 0){
+      const todayLianban = ztPool.filter(s => (s.lbc || 1) >= 2).length;
+      promotionRate = todayLianban / near3[1].length * 100;
+    }
+
+    const ctx = {
+      maxLb: maxLb, ztCount: ztPool.length, dtCount: dtPool.length, lb3Count: lb3Count,
+      zbcRate: zbcRate, zbcCount: zbcCount, touchedZt: touchedZt, dtRatio: dtRatio,
+      yestPremium: yestPremium, yestTopAlive: yestTopAlive, promotionRate: promotionRate
+    };
+    const phaseResult = emoDetectPhase(ctx);
+    const phase = phaseResult.phase;
+    const emoScore = phaseResult.score;
+    const emoScoreDetails = phaseResult.details;
 
     /* 阶段5：主线梯队 */
     setSt('正在构建主线梯队…');
@@ -2546,22 +3131,28 @@ async function runEmotion(){
     setBar(82);
     const golden = emoScanGolden(genes, ztPool, dtPool, marketMap);
 
-    /* 阶段7：低位补涨 */
-    let low = [];
+    /* 阶段7：补涨龙挖掘 */
+    let low = { timing: { node: 0, desc: '' }, stocks: [] };
     if (lowScan){
-      setSt('正在扫描低位补涨标的（需K线，较慢）…');
+      setSt('正在扫描补涨龙候选（时机锁定+三低一纯+K线，较慢）…');
       setBar(88);
-      low = await emoScanLow(ladder, genes, marketMap, conc, (d, n) => setSt('低位补涨 K线 ' + d + '/' + n));
+      low = await emoScanLow(ladder, genes, marketMap, conc, (d, n) => setSt('补涨龙 K线 ' + d + '/' + n), ztPool);
     }
+
+    /* 阶段8：退学买点（三模式） */
+    setSt('正在扫描退学买点信号（三模式）…');
+    setBar(94);
+    const exitBuys = emoScanExitBuys(genes, ztPool, dtPool, marketMap, state.near3);
 
     /* 渲染 */
     setSt('分析完成');
     setBar(100);
-    emoRenderPhase(phase, ctx);
+    emoRenderPhase(phase, ctx, emoScore, emoScoreDetails, phaseResult);
     emoRenderLadder(ladder);
     emoRenderGolden(golden);
     emoRenderLow(low);
-    $('#cntEmotion').textContent = golden.length + low.length;
+    emoRenderExitBuys(exitBuys);
+    $('#cntEmotion').textContent = golden.length + low.stocks.length + exitBuys.buy1.length + exitBuys.buy2.length + exitBuys.buy3.length;
 
   } catch (e){
     console.error(e);
